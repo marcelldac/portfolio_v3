@@ -31,7 +31,7 @@ const sidebarNavItems = [
 const Sidebar = () => {
     return (
       <Box bgColor='gray.900' h={['650px','650px','739px']}>
-        <Image src='/dacti-webapps.png'boxSize={60} objectFit='cover' fallbackSrc='https://via.placeholder.com/150'/>
+        <Image src='/dacti-webapps.png' boxSize={60} objectFit='cover' fallbackSrc='https://via.placeholder.com/150'/>
           {
             sidebarNavItems.map((item, index) => (
               <Link to={item.to} key={index}>
