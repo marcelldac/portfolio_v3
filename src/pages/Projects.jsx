@@ -1,21 +1,9 @@
 import { Box } from "@chakra-ui/react";
 
 import Project from "../components/Project";
+import skills from "../utils/skills";
 
 export default function Projects() {
-
-  const skills = {
-    react_native: "https://img.shields.io/badge/React_Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB",
-    javascript: "https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E",
-    react_js: "https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge",
-    typescript: 'https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white',
-    golang: 'https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white',
-    nextjs: 'https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white',
-    chakraui: 'https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white',
-    python: 'https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54',
-    flask: 'https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white',
-
-  }
 
   const img = {
     p1: "https://github-production-user-asset-6210df.s3.amazonaws.com/83461178/264431707-70fdf994-3127-4722-ac50-fd2f687c9752.png",
@@ -54,7 +42,6 @@ export default function Projects() {
     <Box bgColor='gray.700' w={['400px', '800px', '1300px']} display='flex' justifyContent='center'>
       <Box w='700px' textAlign='center'>
         <Project title='My Portfolio v2.0' src={img.p8} description={desc.p8} skills={[skills.javascript, skills.react_js]} link={links.p8} />
-        {/* old portfolio */}
         <Project title='Zip Code Finder' src={img.p7} description={desc.p7} skills={[skills.javascript, skills.react_js]} link={links.p7} />
         <Project title='React Native Guide' src={img.p1} description={desc.p1} skills={[skills.react_native, skills.javascript]} link={links.p1} />
         <Project title='Q-Coder NPM Package' src={img.p2} description={desc.p2} skills={[skills.typescript, skills.react_js]} link={links.p2} />
