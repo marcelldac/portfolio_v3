@@ -4,6 +4,10 @@ import { BiHomeAlt2 } from 'react-icons/bi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { GiSkills } from 'react-icons/gi';
 import { GoProject } from 'react-icons/go';
+import {
+  AiFillGithub,
+  AiFillLinkedin
+} from 'react-icons/ai';
 
 const sidebarNavItems = [
   {
@@ -22,19 +26,26 @@ const sidebarNavItems = [
     to: '/skills',
   },
   {
-    display: 'Resume',
-    icon: <BsFillPersonLinesFill size={20} />,
-    to: '/resume',
+    display: 'Github',
+    icon: <AiFillGithub size={20} />,
+    to: 'https://github.com/marcelldac',
+    target: '_blank'
   },
+  {
+    display: 'Linkedin',
+    icon: <AiFillLinkedin size={20} />,
+    to: 'https://www.linkedin.com/in/marcelldactes/',
+    target: '_blank'
+  }
 ]
 
 const Sidebar = () => {
   return (
     <Box bgColor='gray.900' minH={['650px', '650px', '739px']} h='auto'>
-      <Image src='/dacti-webapps.png' boxSize={60} objectFit='cover' fallbackSrc='https://via.placeholder.com/150' />
+      <Image src='/logo.png' boxSize={60} objectFit='cover' fallbackSrc='https://via.placeholder.com/150' />
       {
         sidebarNavItems.map((item, index) => (
-          <Link to={item.to} key={index}>
+          <Link to={item.to} key={index} target={item.target}>
             <Flex direction='row' justify='left'>
               <Text ml={10} mt={30.9} color='gray.50'>
                 {item.icon}
