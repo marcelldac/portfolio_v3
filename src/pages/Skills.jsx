@@ -54,7 +54,7 @@ export default function Skills() {
 
   return (
     <>
-      <Box bgColor='gray.700' w={['400px', '800px', '1300px']} display='flex' flexDirection='column'>
+      <Box bgColor='gray.700' w={'1300px'} minH={'1000px'} display='flex' flexDirection='column'>
         <Box color='white' h='10' w='auto' p={2} mx={10} display='flex' alignItems='center' justifyContent='space-around'>
           <Text>Technology icon</Text>
           <Text>Technology name</Text>
