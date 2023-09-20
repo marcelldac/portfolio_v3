@@ -1,7 +1,6 @@
 import { Box, Flex, Image, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { BiHomeAlt2 } from 'react-icons/bi';
-import { BsFillPersonLinesFill } from 'react-icons/bs';
 import { GiSkills } from 'react-icons/gi';
 import { GoProject } from 'react-icons/go';
 import {
