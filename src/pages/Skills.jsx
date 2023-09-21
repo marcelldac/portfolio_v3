@@ -58,7 +58,7 @@ export default function Skills() {
         <Box color='white' h='10' w='auto' p={2} mx={10} display='flex' alignItems='center' justifyContent='space-around'>
           <Text>Technology icon</Text>
           <Text>Technology name</Text>
-          <Text>How much projects?</Text>
+          <Text>How many projects?</Text>
         </Box>
         <Skill skill={skill.react_native} title='React Native' quantity={rnQuant} />
         <Skill skill={skill.javascript} title='Javascript' quantity={jsQuant} />
