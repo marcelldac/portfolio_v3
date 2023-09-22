@@ -1,24 +1,24 @@
-import { useState } from 'react';
-import axios from "axios";
-
+import { useEffect, useState } from 'react';
 import { Box, Text } from "@chakra-ui/react";
+import axios from "axios";
 
 import Skill from "../components/Skill";
 
 import skill from '../utils/skills';
 
 export default function Skills() {
-  /* Adding a skill quantity */
-  /* Create a state */
-  const [jsQuant, setJsQuant] = useState();
-  const [rnQuant, setRnQuant] = useState();
-  const [tsQuant, setTsQuant] = useState();
-  const [reactQuant, setReactQuant] = useState();
-  const [goQuant, setGoQuant] = useState();
-  const [nextQuant, setNextQuant] = useState();
-  const [chakrauiQuant, setChakrauiQuant] = useState();
-  const [pythonQuant, setPythonQuant] = useState();
-  const [flask, setFlask] = useState();
+
+  const [skillQuant, setSkillQuant] = useState({
+    "javascript": 0,
+    "reactnative": 0,
+    "typescript": 0,
+    "reactjs": 0,
+    "golang": 0,
+    "nextjs": 0,
+    "chakraui": 0,
+    "python": 0,
+    "flask": 0,
+  });
 
   function occurrCounter(array, param) {
     return array.filter(item => item.includes(param)).length;
@@ -26,31 +26,24 @@ export default function Skills() {
 
   function arrayLoop(res) {
     const topicsArray = res.map(item => item.topics || []);
-    let initialValue = 0;
-    /* Set state value to this function and modify 
-    occurrCounter param to the name of your skill. */
-    setJsQuant(topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, 'javascript'), initialValue));
-    setRnQuant(topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, 'react-native'), initialValue));
-    setTsQuant(topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, 'typescript'), initialValue));
-    setReactQuant(topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, 'reactjs'), initialValue));
-    setGoQuant(topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, 'golang'), initialValue));
-    setNextQuant(topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, 'nextjs'), initialValue));
-    setChakrauiQuant(topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, 'chakraui'), initialValue));
-    setPythonQuant(topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, 'python'), initialValue));
-    setFlask(topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, 'flask'), initialValue));
+    const newQuant = { ...skillQuant };
+
+    for (const skill in newQuant) {
+      newQuant[skill] = topicsArray.reduce((total, subarray) => total + occurrCounter(subarray, skill), 0)
+    }
+
+    setSkillQuant(newQuant);
   }
 
-  function apiReq() {
+  useEffect(() => {
     axios.get('https://api.github.com/users/marcelldac/repos')
       .then(function (response) {
-        const res = response.data;
-        arrayLoop(res);
-      }).catch(function (error) {
+        arrayLoop(response.data);
+      })
+      .catch(function (error) {
         console.log(error);
-      });
-  }
-
-  apiReq();
+      })
+  })
 
   return (
     <>
@@ -60,15 +53,15 @@ export default function Skills() {
           <Text>Technology name</Text>
           <Text>How many projects?</Text>
         </Box>
-        <Skill skill={skill.react_native} title='React Native' quantity={rnQuant} />
-        <Skill skill={skill.javascript} title='Javascript' quantity={jsQuant} />
-        <Skill skill={skill.typescript} title='Typescript' quantity={tsQuant} />
-        <Skill skill={skill.react_js} title='React.js' quantity={reactQuant} />
-        <Skill skill={skill.golang} title='Golang' quantity={goQuant} />
-        <Skill skill={skill.nextjs} title='Next.js' quantity={nextQuant} />
-        <Skill skill={skill.chakraui} title='Chakra-UI' quantity={chakrauiQuant} />
-        <Skill skill={skill.python} title='Python' quantity={pythonQuant} />
-        <Skill skill={skill.flask} title='Flask' quantity={flask} />
+        <Skill skill={skill.react_native} title='React Native' quantity={skillQuant.reactnative} />
+        <Skill skill={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
+        <Skill skill={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
+        <Skill skill={skill.react_js} title='React.js' quantity={skillQuant.reactjs} />
+        <Skill skill={skill.golang} title='Golang' quantity={skillQuant.golang} />
+        <Skill skill={skill.nextjs} title='Next.js' quantity={skillQuant.nextjs} />
+        <Skill skill={skill.chakraui} title='Chakra-UI' quantity={skillQuant.chakraui} />
+        <Skill skill={skill.python} title='Python' quantity={skillQuant.python} />
+        <Skill skill={skill.flask} title='Flask' quantity={skillQuant.flask} />
       </Box>
     </>
   )
