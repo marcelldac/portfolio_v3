@@ -25,6 +25,7 @@ export default function Skills() {
     "chakraui": 0,
     "python": 0,
     "flask": 0,
+    "java": 0,
   });
 
   function occurrCounter(array, param) {
@@ -64,6 +65,7 @@ export default function Skills() {
               <Th>How Many Projects?</Th>
             </Tr>
           </Thead>
+          <Skill icon={skill.java} title='Java' quantity={skillQuant.java} />
           <Skill icon={skill.react_native} title='React Native' quantity={skillQuant.reactnative} />
           <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
           <Skill icon={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
