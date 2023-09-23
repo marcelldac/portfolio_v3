@@ -1,17 +1,21 @@
-import { Tr, Td, Tbody } from "@chakra-ui/react";
+import { Tr, Td, Tbody, Image, Text } from "@chakra-ui/react";
 
 export default function Skill(props) {
   return (
     <Tbody>
       <Tr>
         <Td>
-          <img src={props.icon} />
+          <Image
+            src={props.icon}
+            fallbackSrc='https://via.placeholder.com/150'
+            borderRadius='5px'
+          />
         </Td>
         <Td>
-          {props.title}
+          <Text>{props.title}</Text>
         </Td>
         <Td>
-          {props.quantity}
+          <Text>{props.quantity}</Text>
         </Td>
       </Tr >
     </Tbody>
