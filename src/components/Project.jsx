@@ -21,7 +21,7 @@ export default function Project(props) {
         objectFit='cover'
         maxW={{ base: '100%', sm: '200px' }}
         src={props.src}
-        alt='Caffe Latte'
+        fallbackSrc='https://via.placeholder.com/150'
       />
       <Stack>
         <CardBody>
