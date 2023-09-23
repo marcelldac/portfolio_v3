@@ -1,5 +1,7 @@
 import { Box, Text, Divider } from "@chakra-ui/react";
 
+import CustomTabs from '../components/CustomTabs';
+
 
 const Title = ({ children }) => {
   return <Text fontSize='30' color='gray.700' m={10}>{children}</Text>
@@ -18,7 +20,8 @@ export default function Home() {
       <Subtitle>Currently working on UniCripto as CEO.</Subtitle>
       <Subtitle>Currently delving into Java.</Subtitle>
       <Subtitle>I worked as a Mobile Developer.</Subtitle>
-      <Divider />
+      <Divider my={10} />
+      <CustomTabs />
     </Box>
   )
 }
