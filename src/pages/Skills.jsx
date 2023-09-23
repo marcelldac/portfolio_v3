@@ -58,7 +58,7 @@ export default function Skills() {
     <Box display='flex' justifyContent='center'>
       <TableContainer>
         <Table variant='simple'>
-          <TableCaption>Some of my skills.</TableCaption>
+          <TableCaption>My Skills</TableCaption>
           <Thead>
             <Tr>
               <Th>Icon</Th>
