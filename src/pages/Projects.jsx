@@ -39,17 +39,15 @@ export default function Projects() {
   }
 
   return (
-    <Box bgColor='gray.700' w={['400px', '800px', '1300px']} display='flex' justifyContent='center'>
-      <Box w='700px' textAlign='center'>
-        <Project title='My Portfolio v2.0' src={img.p8} description={desc.p8} skills={[skills.javascript, skills.react_js]} link={links.p8} />
-        <Project title='Zip Code Finder' src={img.p7} description={desc.p7} skills={[skills.javascript, skills.react_js]} link={links.p7} />
-        <Project title='React Native Guide' src={img.p1} description={desc.p1} skills={[skills.react_native, skills.javascript]} link={links.p1} />
-        <Project title='Q-Coder NPM Package' src={img.p2} description={desc.p2} skills={[skills.typescript, skills.react_js]} link={links.p2} />
-        <Project title='Finance System API' src={img.p3} description={desc.p3} skills={[skills.golang]} link={links.p3} />
-        <Project title='Inventory Control System' src={img.p4} description={desc.p4} skills={[skills.javascript, skills.nextjs, skills.chakraui]} link={links.p4} />
-        <Project title='React Native Health App' src={img.p5} description={desc.p5} skills={[skills.javascript, skills.react_native]} link={links.p5} />
-        <Project title='Thumbnail Downloader' src={img.p6} description={desc.p6} skills={[skills.python, skills.flask]} link={links.p6} />
-      </Box>
+    <Box m={30}>
+      <Project title='My Portfolio v2.0' src={img.p8} description={desc.p8} skills={[skills.javascript, skills.react_js]} link={links.p8} />
+      <Project title='Zip Code Finder' src={img.p7} description={desc.p7} skills={[skills.javascript, skills.react_js]} link={links.p7} />
+      <Project title='React Native Guide' src={img.p1} description={desc.p1} skills={[skills.react_native, skills.javascript]} link={links.p1} />
+      <Project title='Q-Coder NPM Package' src={img.p2} description={desc.p2} skills={[skills.typescript, skills.react_js]} link={links.p2} />
+      <Project title='Finance System API' src={img.p3} description={desc.p3} skills={[skills.golang]} link={links.p3} />
+      <Project title='Inventory Control System' src={img.p4} description={desc.p4} skills={[skills.javascript, skills.nextjs, skills.chakraui]} link={links.p4} />
+      <Project title='React Native Health App' src={img.p5} description={desc.p5} skills={[skills.javascript, skills.react_native]} link={links.p5} />
+      <Project title='Thumbnail Downloader' src={img.p6} description={desc.p6} skills={[skills.python, skills.flask]} link={links.p6} />
     </Box>
   )
 }
