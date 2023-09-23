@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Flex } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { GiSkills } from 'react-icons/gi';
