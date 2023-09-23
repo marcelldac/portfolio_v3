@@ -1,4 +1,4 @@
-import { Flex, background } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 import { Link } from 'react-router-dom';
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { GiSkills } from 'react-icons/gi';
@@ -50,10 +50,13 @@ const Header = () => {
     >
       {
         sidebarNavItems.map((item, index) => (
-          <Link to={item.to} key={index} target={item.target}>
-            {/* <Flex direction='row '> */}
+          <Link
+            to={item.to}
+            key={index}
+            target={item.target}
+          >
             <Flex color='white' direction='row' pr='90px'>
-              {item.display}
+              <Text _hover={{ color: 'blue.500' }}>{item.display}</Text>
             </Flex>
           </Link>
         ))
