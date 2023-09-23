@@ -4,7 +4,6 @@ import {
   Divider,
   Image,
   Flex,
-  Center,
 } from "@chakra-ui/react";
 
 import CustomTabs from '../components/CustomTabs';
@@ -20,17 +19,16 @@ const Subtitle = ({ children }) => {
 export default function Home() {
   return (
     <Box>
-      <Flex direction='row' justifyContent='space-around'>
+      <Flex direction={{ base: 'column', sm: 'row' }} justifyContent='space-around'>
         <Box>
           <Subtitle >Marcell. 19 y/o developer, Linux lover and bitcoiner!</Subtitle>
           {/* TODO: Colocar link do projeto unicripto (direcionar pro projeto dentro do site ou pro site da Unicripto que será criado) */}
           <Subtitle>Currently working on UniCripto as CEO.</Subtitle>
           <Subtitle>Currently delving into Java.</Subtitle>
-          <Subtitle>Freelancer Developer since 2022!</Subtitle>
         </Box>
-        <Box textAlign='center'>
-          <Image src='./me.jpg' borderRadius='full' boxSize='150px' fallbackSrc='https://via.placeholder.com/150' justifySelf='stretch' />
-          <Text as='b'>Marcell Dactes</Text>
+        <Box textAlign='center' display={{ base: 'flex', sm: 'block' }} alignItems='center'>
+          <Image src='./me.jpg' borderRadius='full' boxSize='150px' mt={2} fallbackSrc='https://via.placeholder.com/150' />
+          <Text as='b' >Marcell Dactes</Text>
           <Text>Full-Stack Developer</Text>
         </Box>
       </Flex>
