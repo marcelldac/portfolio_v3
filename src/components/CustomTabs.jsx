@@ -1,25 +1,32 @@
-import { Box, Button, TabList, TabPanel, TabPanels, Tabs, Text, useMultiStyleConfig, useTab } from '@chakra-ui/react';
 import React from 'react';
+import {
+  Box,
+  Button,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  Text,
+  useMultiStyleConfig,
+  useTab
+} from '@chakra-ui/react';
+
+const CustomTab = React.forwardRef((props, ref) => {
+  const tabProps = useTab({ ...props, ref })
+  const isSelected = !!tabProps['aria-selected']
+  const styles = useMultiStyleConfig('Tabs', tabProps)
+
+  return (
+    <Button __css={styles.tab} {...tabProps}>
+      <Box as='span' mr='2'>
+        {isSelected ? '😎' : '😐'}
+      </Box>
+      {tabProps.children}
+    </Button>
+  )
+})
 
 export default function CustomTabs() {
-  const CustomTab = React.forwardRef((props, ref) => {
-    // 1. Reuse the `useTab` hook
-    const tabProps = useTab({ ...props, ref })
-    const isSelected = !!tabProps['aria-selected']
-
-    // 2. Hook into the Tabs `size`, `variant`, props
-    const styles = useMultiStyleConfig('Tabs', tabProps)
-
-    return (
-      <Button __css={styles.tab} {...tabProps}>
-        <Box as='span' mr='2'>
-          {isSelected ? '😎' : '😐'}
-        </Box>
-        {tabProps.children}
-      </Button>
-    )
-  })
-
   return (
     <Tabs>
       <TabList>
