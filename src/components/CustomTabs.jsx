@@ -2,6 +2,7 @@ import React from 'react';
 import {
   Box,
   Button,
+  Flex,
   TabList,
   TabPanel,
   TabPanels,
@@ -17,10 +18,10 @@ const CustomTab = React.forwardRef((props, ref) => {
   const styles = useMultiStyleConfig('Tabs', tabProps)
 
   return (
-    <Button __css={styles.tab} {...tabProps}>
-      <Box as='span' mr='2'>
+    <Button __css={styles.tab} {...tabProps} display='flex'>
+      <Flex as='span' mx='2'>
         {isSelected ? '😎' : '😐'}
-      </Box>
+      </Flex>
       {tabProps.children}
     </Button>
   )
