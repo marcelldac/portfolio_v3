@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 
 import CustomTabs from '../components/CustomTabs';
+import Form from '../components/Form';
 
 const Title = ({ children }) => {
   return <Text fontSize='30' color='gray.700' m={10}>{children}</Text>
@@ -49,7 +50,10 @@ export default function Home() {
       </Flex>
       <Divider my={10} />
       <CustomTabs />
+      <Divider my={10} />
+      <Flex justifyContent='center' textAlign='center'>
+        <Form />
+      </Flex>
     </Box>
-
   )
 }
