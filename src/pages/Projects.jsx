@@ -15,6 +15,7 @@ export default function Projects() {
     p7: 'https://github-production-user-asset-6210df.s3.amazonaws.com/83461178/268435778-07114689-599b-424d-a9d0-a71a7c97b250.png',
     p8: 'https://github-production-user-asset-6210df.s3.amazonaws.com/83461178/268437038-9fbd5a7a-04b4-4bfb-a7f8-042cac07cf70.png',
     p9: 'https://github-production-user-asset-6210df.s3.amazonaws.com/83461178/270091743-9978722a-e987-4500-b522-8309f00665bf.png',
+    p10: 'https://github-production-user-asset-6210df.s3.amazonaws.com/83461178/270149382-048066f2-081f-4b69-a029-14ec26ac0ae9.png',
   }
 
   const desc = {
@@ -27,6 +28,7 @@ export default function Projects() {
     p7: 'A zip code finder. The user puts your postal code info and the system returns information about it.',
     p8: 'My old portfolio. Made with ReactJs, it is my 2.0 version of portfolio. (this is 3.0.).',
     p9: 'The User Management System is a robust Java Spring Boot application designed to streamline the management of user data within an organization. This project implements a full-fledged CRUD (Create, Read, Update, Delete) functionality for user entities, offering a secure and efficient way to handle user information.',
+    p10: 'A Simple Password Manager made in Python. It is not yet at the production level.'
   }
 
   const links = {
@@ -39,10 +41,12 @@ export default function Projects() {
     p7: 'https://github.com/marcelldac/zip-code-finder',
     p8: 'https://github.com/marcelldac/portfolio',
     p9: 'https://github.com/marcelldac/crud_usuarios',
+    p10: 'https://github.com/marcelldac/password-generator',
   }
 
   return (
     <Box m={30}>
+      <Project title="Password Manager" src={img.p10} description={desc.p10} skills={[skills.python]} link={links.p10} />
       <Project title="Users CRUD" src={img.p9} description={desc.p9} skills={[skills.java]} link={links.p9} />
       <Project title='My Portfolio v2.0' src={img.p8} description={desc.p8} skills={[skills.javascript, skills.react_js]} link={links.p8} />
       <Project title='Zip Code Finder' src={img.p7} description={desc.p7} skills={[skills.javascript, skills.react_js]} link={links.p7} />
