@@ -25,7 +25,7 @@ export default function Skills() {
     "chakraui": 0,
     "python": 0,
     "flask": 0,
-    "java": 0,
+    "jv": 0,
     "springboot": 0,
   });
 
@@ -67,7 +67,7 @@ export default function Skills() {
             </Tr>
           </Thead>
           <Skill icon={skill.spring_boot} title='Spring Boot' quantity={skillQuant.springboot} />
-          <Skill icon={skill.java} title='Java' quantity={skillQuant.java} />
+          <Skill icon={skill.java} title='Java' quantity={skillQuant.jv} />
           <Skill icon={skill.react_native} title='React Native' quantity={skillQuant.reactnative} />
           <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
           <Skill icon={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
