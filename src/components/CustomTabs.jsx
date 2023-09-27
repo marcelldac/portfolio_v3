@@ -31,7 +31,7 @@ export default function CustomTabs() {
   return (
     <Tabs>
       <TabList>
-        <CustomTab>As a Teacher</CustomTab>
+        <CustomTab>As a Speaker</CustomTab>
         <CustomTab>As a Developer</CustomTab>
         <CustomTab>As a Student</CustomTab>
       </TabList>
