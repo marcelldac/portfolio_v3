@@ -27,6 +27,8 @@ export default function Skills() {
     "flask": 0,
     "jv": 0,
     "springboot": 0,
+    "node": 0,
+    "postgresql": 0,
   });
 
   function occurrCounter(array, param) {
@@ -66,12 +68,14 @@ export default function Skills() {
               <Th>How Many Projects?</Th>
             </Tr>
           </Thead>
+          <Skill icon={skill.postgresql} title='PostgreSQL' quantity={skillQuant.postgresql} />
           <Skill icon={skill.spring_boot} title='Spring Boot' quantity={skillQuant.springboot} />
           <Skill icon={skill.java} title='Java' quantity={skillQuant.jv} />
           <Skill icon={skill.react_native} title='React Native' quantity={skillQuant.reactnative} />
           <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
           <Skill icon={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
           <Skill icon={skill.react_js} title='React.js' quantity={skillQuant.reactjs} />
+          <Skill icon={skill.node} title='Node.js' quantity={skillQuant.node} />
           <Skill icon={skill.golang} title='Golang' quantity={skillQuant.golang} />
           <Skill icon={skill.nextjs} title='Next.js' quantity={skillQuant.nextjs} />
           <Skill icon={skill.chakraui} title='Chakra-UI' quantity={skillQuant.chakraui} />
