@@ -37,7 +37,7 @@ export default function CustomTabs() {
       </TabList>
       <TabPanels>
         <TabPanel ml={2} fontSize={17}>
-          <Text as='b'>At Unijorge:</Text>
+          <Text as='b'>At Unijorge(Salvador City):</Text>
           <ul>
             <li>Weekly Programming Logic Workshops</li>
             <li>HTML5 and CSS3: Build Your First Website.</li>
@@ -45,11 +45,20 @@ export default function CustomTabs() {
             <li>ReactJs: State Management with Redux.</li>
             <li>NodeJs: Building an Image Upload API using MongoDB.</li>
           </ul>
+          <Text as='b'>At Unijorge(Camaçari City):</Text>
+          <ul>
+            <li>Programming Logic Workshop.</li>
+          </ul>
         </TabPanel>
         <TabPanel ml={2} fontSize={17}>
           <Text as='b'>Full-stack Developer</Text>
-          <Text>Passionate about programming. I began my studies at around the age of 14 with the Python language. I always strive to understand the lowest levels of structures and comprehend that programming language is merely a tool.</Text>
           <Text fontSize={10}>Back-end {'>>>'} Front-end</Text>
+          <Text mb={2}>Passionate about programming. I began my studies at around the age of 14 with the Python language. I always strive to understand the lowest levels of structures and comprehend that programming language is merely a tool.</Text>
+          <Text>Some companies that use my services or apps:</Text>
+          <li><Text as='b'>No Trânsito</Text></li>
+          <li><Text as='b'>GoodVibe</Text></li>
+          <li><Text as='b'>Learn More</Text></li>
+
         </TabPanel>
         <TabPanel ml={2} fontSize={17}>
           <Text as='b'>Computer Scientist (almost)</Text>
