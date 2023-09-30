@@ -54,7 +54,7 @@ export default function Skills() {
       .catch(function (error) {
         console.log(error);
       })
-  })
+  }, [])
 
   return (
     <Box display='flex' justifyContent='center'>
