@@ -41,7 +41,12 @@ export default function Home() {
           {/* TODO: Colocar link do projeto unicripto (direcionar pro projeto dentro do site ou pro site da Unicripto que será criado) */}
           <Subtitle>Currently working on UniCripto as CEO.</Subtitle>
           <Subtitle>Currently delving into Java.</Subtitle>
-          <Subtitle _hover={{ color: 'blue.500' }} cursor='pointer' textDecoration='underline' onClick={() => window.scrollTo(0, 500)}>Tenha um contato direto comigo!</Subtitle>
+          <Subtitle
+            _hover={{ color: 'blue.500' }}
+            cursor='pointer'
+            textDecoration='underline'
+            onClick={() => window.scroll({ top: 500, behavior: 'smooth' })}
+          >Tenha um contato direto comigo!</Subtitle>
 
         </Box>
         <Box
