@@ -49,6 +49,7 @@ export default function CustomTabs() {
         <TabPanel ml={2} fontSize={17}>
           <Text as='b'>Full-stack Developer</Text>
           <Text>Passionate about programming. I began my studies at around the age of 14 with the Python language. I always strive to understand the lowest levels of structures and comprehend that programming language is merely a tool.</Text>
+          <Text fontSize={10}>Back-end {'>>>'} Front-end</Text>
         </TabPanel>
         <TabPanel ml={2} fontSize={17}>
           <Text as='b'>Computer Scientist (almost)</Text>
