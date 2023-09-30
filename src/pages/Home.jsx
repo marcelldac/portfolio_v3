@@ -8,6 +8,7 @@ import {
 
 import CustomTabs from '../components/CustomTabs';
 import Form from '../components/Form';
+import { useEffect } from "react";
 
 const Title = ({ children }) => {
   return <Text fontSize='30' color='gray.700' m={10}>{children}</Text>
@@ -18,6 +19,11 @@ const Subtitle = ({ children }) => {
 }
 
 export default function Home() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
+
   return (
     <Box>
       <Flex
