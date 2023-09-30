@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Flex, Text } from "@chakra-ui/react";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
+
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { GiSkills } from 'react-icons/gi';
 import { GoProject } from 'react-icons/go';
@@ -40,16 +42,6 @@ const sidebarNavItems = [
 ]
 
 const Header = () => {
-  const [update, setUpdate] = useState(false);
-  const navTo = useNavigate();
-
-  useEffect(() => {
-    navTo('/');
-    window.scrollTo(0, 460);
-    setUpdate(false);
-  }, [update]);
-
-
   return (
     <Flex
       bgColor='gray.900'
@@ -72,7 +64,6 @@ const Header = () => {
           </Link>
         ))
       }
-      <Text color='white' _hover={{ color: 'blue.500' }} onClick={() => setUpdate(true)}>Contact</Text>
     </Flex >
   )
 }

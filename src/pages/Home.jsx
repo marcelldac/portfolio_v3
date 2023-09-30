@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import {
   Box,
   Text,
@@ -8,22 +10,25 @@ import {
 
 import CustomTabs from '../components/CustomTabs';
 import Form from '../components/Form';
-import { useEffect } from "react";
 
 const Title = ({ children }) => {
   return <Text fontSize='30' color='gray.700' m={10}>{children}</Text>
 }
 
-const Subtitle = ({ children }) => {
-  return <Text fontSize='17' color='gray.700' ml={12} mt={4}>{children}</Text>
+const Subtitle = ({ children, onClick, _hover, cursor, textDecoration }) => {
+  return <Text
+    fontSize='17'
+    color='gray.700'
+    cursor={cursor}
+    ml={12}
+    mt={4}
+    onClick={onClick}
+    _hover={_hover}
+    textDecoration={textDecoration}
+  >{children}</Text>
 }
 
 export default function Home() {
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [])
-
   return (
     <Box>
       <Flex
@@ -36,6 +41,8 @@ export default function Home() {
           {/* TODO: Colocar link do projeto unicripto (direcionar pro projeto dentro do site ou pro site da Unicripto que será criado) */}
           <Subtitle>Currently working on UniCripto as CEO.</Subtitle>
           <Subtitle>Currently delving into Java.</Subtitle>
+          <Subtitle _hover={{ color: 'blue.500' }} cursor='pointer' textDecoration='underline' onClick={() => window.scrollTo(0, 500)}>Tenha um contato direto comigo!</Subtitle>
+
         </Box>
         <Box
           textAlign='center'
