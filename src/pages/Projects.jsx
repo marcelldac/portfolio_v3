@@ -17,6 +17,7 @@ export default function Projects() {
     p9: 'https://github-production-user-asset-6210df.s3.amazonaws.com/83461178/270091743-9978722a-e987-4500-b522-8309f00665bf.png',
     p10: 'https://github-production-user-asset-6210df.s3.amazonaws.com/83461178/270149382-048066f2-081f-4b69-a029-14ec26ac0ae9.png',
     p11: 'https://github-production-user-asset-6210df.s3.amazonaws.com/83461178/270899323-68a48172-69ea-4a7c-a488-e2c4ae490f81.png',
+    learnMore: 'https://github-production-user-asset-6210df.s3.amazonaws.com/83461178/271793275-1f0c74de-404b-481f-ba44-9bc8e66a1f08.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20230930%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230930T201137Z&X-Amz-Expires=300&X-Amz-Signature=6ea294387df015bf4de63c2fbe04bfb58189f71547f7bc400b55286f27cfaac2&X-Amz-SignedHeaders=host&actor_id=83461178&key_id=0&repo_id=696050251'
   }
 
   const desc = {
@@ -31,6 +32,7 @@ export default function Projects() {
     p9: 'The User Management System is a robust Java Spring Boot application designed to streamline the management of user data within an organization. This project implements a full-fledged CRUD (Create, Read, Update, Delete) functionality for user entities, offering a secure and efficient way to handle user information.',
     p10: 'A Simple Password Manager made in Python. It is not yet at the production level.',
     p11: 'DacTI is my project that commercializes websites and IT projects in general, at an affordable price!',
+    learnMore: "Learn More: Simplify Your Learning. Learn quickly with direct contact with teachers.Front-end built in ReactJs, Back-end developed in NodeJs, PostgreSQL database. Relationships have been established between the entities professor and publications (so that professors can have publications) and professor and subjects (so that the professor can teach one or more subjects). Both relationships are '1:n'. Redux is used to persist the login of the coordinator's administrator."
   }
 
   const links = {
@@ -45,10 +47,12 @@ export default function Projects() {
     p9: 'https://github.com/marcelldac/crud_usuarios',
     p10: 'https://github.com/marcelldac/password-generator',
     p11: 'https://dacti-xi.vercel.app/',
+    learnMore: 'https://github.com/marcelldac/client_learn_more_system'
   }
 
   return (
     <Box m={30}>
+      <Project title='Learn More' src={img.learnMore} description={desc.learnMore} skills={[skills.javascript, skills.react_js, skills.node, skills.postgresql]} link={links.learnMore} />
       <Project title='DacTI Project' src={img.p11} description={desc.p11} skills={[skills.javascript, skills.react_js]} link={links.p11} />
       <Project title="Password Manager" src={img.p10} description={desc.p10} skills={[skills.python]} link={links.p10} />
       <Project title="Users CRUD" src={img.p9} description={desc.p9} skills={[skills.java]} link={links.p9} />
