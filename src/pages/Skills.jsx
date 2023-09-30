@@ -68,19 +68,23 @@ export default function Skills() {
               <Th>How Many Projects?</Th>
             </Tr>
           </Thead>
-          <Skill icon={skill.postgresql} title='PostgreSQL' quantity={skillQuant.postgresql} />
+          {/* Back */}
+          <Skill icon={skill.node} title='Node.js' quantity={skillQuant.node} />
           <Skill icon={skill.spring_boot} title='Spring Boot' quantity={skillQuant.springboot} />
-          <Skill icon={skill.java} title='Java' quantity={skillQuant.jv} />
+          {/* Front */}
+          <Skill icon={skill.chakraui} title='Chakra-UI' quantity={skillQuant.chakraui} />
+          <Skill icon={skill.react_js} title='React.js' quantity={skillQuant.reactjs} />
+          <Skill icon={skill.nextjs} title='Next.js' quantity={skillQuant.nextjs} />
           <Skill icon={skill.react_native} title='React Native' quantity={skillQuant.reactnative} />
+          <Skill icon={skill.flask} title='Flask' quantity={skillQuant.flask} />
+          {/* Dbs */}
+          <Skill icon={skill.postgresql} title='PostgreSQL' quantity={skillQuant.postgresql} />
+          {/* Languages */}
           <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
           <Skill icon={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
-          <Skill icon={skill.react_js} title='React.js' quantity={skillQuant.reactjs} />
-          <Skill icon={skill.node} title='Node.js' quantity={skillQuant.node} />
+          <Skill icon={skill.java} title='Java' quantity={skillQuant.jv} />
           <Skill icon={skill.golang} title='Golang' quantity={skillQuant.golang} />
-          <Skill icon={skill.nextjs} title='Next.js' quantity={skillQuant.nextjs} />
-          <Skill icon={skill.chakraui} title='Chakra-UI' quantity={skillQuant.chakraui} />
           <Skill icon={skill.python} title='Python' quantity={skillQuant.python} />
-          <Skill icon={skill.flask} title='Flask' quantity={skillQuant.flask} />
         </Table>
       </TableContainer>
     </Box>
