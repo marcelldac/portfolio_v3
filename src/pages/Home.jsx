@@ -31,23 +31,19 @@ const Subtitle = ({ children, onClick, _hover, cursor, textDecoration }) => {
 export default function Home() {
   return (
     <Box>
-      <Flex
-        direction={{ base: 'column', sm: 'row' }}
-        justifyContent='space-around'
-      >
+      <Flex direction={{ base: 'column', sm: 'row' }} justifyContent='space-around'>
         <Box>
           <Title>Welcome to my Portfolio!</Title>
           <Subtitle >Marcell. 19 y/o developer, Linux lover and bitcoiner!</Subtitle>
           {/* TODO: Colocar link do projeto unicripto (direcionar pro projeto dentro do site ou pro site da Unicripto que será criado) */}
           <Subtitle>Currently working on UniCripto as CEO.</Subtitle>
-          <Subtitle>Currently delving into Java.</Subtitle>
+          <Subtitle>Currently delving into NodeJs.</Subtitle>
           <Subtitle
             _hover={{ color: 'blue.500' }}
             cursor='pointer'
             textDecoration='underline'
             onClick={() => window.scroll({ top: 500, behavior: 'smooth' })}
           >Tenha um contato direto comigo!</Subtitle>
-
         </Box>
         <Box
           textAlign='center'
