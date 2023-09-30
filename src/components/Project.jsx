@@ -7,9 +7,14 @@ import {
   CardBody,
   Heading,
   CardFooter,
+  Box,
+  Flex,
 } from "@chakra-ui/react";
 
 export default function Project(props) {
+
+  const skills = props.skills;
+
   return (
     <Card
       direction={{ base: 'column', sm: 'row' }}
@@ -29,6 +34,15 @@ export default function Project(props) {
           <Text py='2'>
             {props.description}
           </Text>
+          <Flex>
+            {skills.map((element, index) => {
+              return (
+                <Box key={index} pr={4}>
+                  <Image src={element} />
+                </Box>
+              );
+            })}
+          </Flex>
         </CardBody>
         <CardFooter>
           <a href={props.link} target="_blank">
