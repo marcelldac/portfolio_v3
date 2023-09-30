@@ -1,18 +1,10 @@
 import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import { useForm } from '@formspree/react';
 import { Button, FormControl, FormHelperText, FormLabel, Heading, Input, Text, Textarea } from '@chakra-ui/react';
 
-const Submitting = () => {
-  return (
-    <Heading>Submitting</Heading>
-  )
-}
+const Submitting = () => { return <Heading>Submitting</Heading> }
 
-const Succeeded = () => {
-  return (
-    <Heading>Succeeded</Heading>
-  )
-}
+const Succeeded = () => { return <Heading>Succeeded</Heading> }
 
 function Form() {
   const [state, handleSubmit] = useForm("myyqnoze");
