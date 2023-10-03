@@ -15,7 +15,10 @@
         "react"
     ],
     "rules": {
-        "quotes": ["error", "single", { "avoidEscape": true }],
-        "indent":["error"]
+        "quotes":[2, "single", { "avoidEscape": true }],
+        "indent":2,
+        "react/no-unescaped-entities":1,
+        "react/prop-types":0,
+        "react/react-in-jsx-scope":0
     }
 }
