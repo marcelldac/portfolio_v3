@@ -65,8 +65,7 @@ export default function CustomTabs() {
                     <ul>
                         <li>Undergraduate student at Unijorge majoring in Computer Science, currently in the 4th semester.</li>
                         <li>Former teaching assistant in the Web Development course.</li>
-                        <li>Participant in scientific research on data analysis using machine learning:
-              I had the opportunity to delve into data analysis, considering the use of machine learning to enhance the process. Techniques such as clustering and decision trees have already been employed in the development of the research project.</li>
+                        <li>Participant in scientific research on data analysis using machine learning: I had the opportunity to delve into data analysis, considering the use of machine learning to enhance the process. Techniques such as clustering and decision trees have already been employed in the development of the research project.</li>
                     </ul>
                 </TabPanel>
             </TabPanels>
