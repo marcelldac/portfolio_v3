@@ -12,17 +12,17 @@ import {
 
 const sidebarNavItems = [
     {
-        display: 'Home',
+        display: 'Início',
         icon: <BiHomeAlt2 size={20} />,
         to: '/',
     },
     {
-        display: 'Projects',
+        display: 'Projetos',
         icon: <GoProject size={20} />,
         to: '/projects',
     },
     {
-        display: 'Skills',
+        display: 'Habilidades',
         icon: <GiSkills size={20} />,
         to: '/skills',
     },
@@ -35,7 +35,7 @@ const sidebarNavItems = [
     {
         display: 'Linkedin',
         icon: <AiFillLinkedin size={20} />,
-        to: 'https://www.linkedin.com/in/marcelldactes/',
+        to: 'https://www.linkedin.com/in/marcell-dactes-23b384294/',
         target: '_blank'
     }
 ]

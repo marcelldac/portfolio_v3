@@ -17,12 +17,7 @@ export default function Project(props) {
     const skills = props.skills;
 
     return (
-        <Card
-            direction={{ base: 'column', sm: 'row' }}
-            overflow='hidden'
-            variant='outline'
-            mt={20}
-        >
+        <Card direction={{ base: 'column', sm: 'row' }} variant='elevated' mt={20}>
             <Image
                 objectFit='cover'
                 maxW={{ base: '100%', sm: '200px' }}
@@ -47,9 +42,7 @@ export default function Project(props) {
                 </CardBody>
                 <CardFooter>
                     <a href={props.link} target="_blank" rel="noreferrer">
-                        <Button variant='solid' colorScheme='green' >
-              See More
-                        </Button>
+                        <Button variant='solid' colorScheme='green' isDisabled={props.link == '' ? true : false}>See More</Button>
                     </a>
                 </CardFooter>
             </Stack>

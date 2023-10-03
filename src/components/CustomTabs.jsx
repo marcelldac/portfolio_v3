@@ -18,8 +18,8 @@ const CustomTab = React.forwardRef((props, ref) => {
     const styles = useMultiStyleConfig('Tabs', tabProps)
 
     return (
-        <Button __css={styles.tab} {...tabProps} display='flex'>
-            <Flex as='span' mx='2'>
+        <Button __css={styles.tab} {...tabProps} display='flex' >
+            <Flex>
                 {isSelected ? '😎' : '😐'}
             </Flex>
             {tabProps.children}
@@ -29,44 +29,41 @@ const CustomTab = React.forwardRef((props, ref) => {
 
 export default function CustomTabs() {
     return (
-        <Tabs>
-            <TabList>
-                <CustomTab>As a Speaker</CustomTab>
-                <CustomTab>As a Developer</CustomTab>
-                <CustomTab>As a Student</CustomTab>
+        <Tabs textAlign='center'>
+            <TabList display='flex' flexDirection='row' justifyContent='space-evenly'>
+                <CustomTab>Como Palestrante</CustomTab>
+                <CustomTab>Como Desenvolvedor</CustomTab>
+                <CustomTab>Como Estudante</CustomTab>
             </TabList>
             <TabPanels>
-                <TabPanel ml={2} fontSize={17}>
-                    <Text as='b'>At Unijorge(Salvador City):</Text>
-                    <ul>
-                        <li>Weekly Programming Logic Workshops</li>
-                        <li>HTML5 and CSS3: Build Your First Website.</li>
-                        <li>ReactJs: Creating Your First Web App (Part 1 and 2).</li>
-                        <li>ReactJs: State Management with Redux.</li>
-                        <li>NodeJs: Building an Image Upload API using MongoDB.</li>
-                    </ul>
-                    <Text as='b'>At Unijorge(Camaçari City):</Text>
-                    <ul>
-                        <li>Programming Logic Workshop.</li>
-                    </ul>
+                <TabPanel fontSize={17}>
+                    <Text as='b'>Na Unijorge (Salvador):</Text>
+                    <p>Monitorias semanais de lógica de programação durante um semestre (2023.1).</p>
+                    <p>HTML5 e CSS3: Crie seu primeiro site.</p>
+                    <p>Merge Sort: Entenda estrutura de dados de forma simples.</p>
+                    <p>ReactJs: Criando seu primeiro WebApp (Parte 1 e 2).</p>
+                    <p>ReactJs: Gerenciamento de Estado com Redux.</p>
+                    <p>NodeJs: Criando um API de upload de imagens utilizando o MongoDB.</p>
+                    <Text as='b'>Na Unijorge (Camaçari):</Text>
+                    <p>Lógica de Programação: Iniciando no mundo da programação.</p>
                 </TabPanel>
-                <TabPanel ml={2} fontSize={17}>
-                    <Text as='b'>Full-stack Developer</Text>
+                <TabPanel fontSize={17}>
+                    <Text as='b'>Desenvolvedor Full-Stack</Text>
                     <Text fontSize={10}>Back-end {'>>>'} Front-end</Text>
-                    <Text mb={2}>Passionate about programming. I began my studies at around the age of 14 with the Python language. I always strive to understand the lowest levels of structures and comprehend that programming language is merely a tool.</Text>
-                    <Text>Some companies that use my services or apps:</Text>
-                    <li><Text as='b'>No Trânsito</Text></li>
-                    <li><Text as='b'>GoodVibe</Text></li>
-                    <li><Text as='b'>Learn More</Text></li>
+                    <Text mb={2} mx={20}>Apaixonado por programação. Iniciei meus estudos na área por volta dos 14 anos com a linguagem <b>Python</b>. Hoje em dia, programo principalmente em <b>Javascript</b> utilizando seus frameworks <b>React</b> e <b>Node</b>. Entendo que a linguagem de programação é meramente uma ferramenta. O importante mesmo é a <b>Lógica!</b> Pensando nisso, tenho projetos também em outras linguagens de programação, como <b>Golang</b>, <b>Java</b> e até mesmo o próprio Python.</Text>
+                    <Text>Algumas empresas que utilizam ou já utilizaram meus serviços:</Text>
+                    <Flex direction='column'>
+                        <Text as='b'>No Trânsito</Text>
+                        <Text as='b'>GoodVibe</Text>
+                        <Text as='b'>Learn More</Text>
+                    </Flex>
 
                 </TabPanel>
                 <TabPanel ml={2} fontSize={17}>
-                    <Text as='b'>Computer Scientist (almost)</Text>
-                    <ul>
-                        <li>Undergraduate student at Unijorge majoring in Computer Science, currently in the 4th semester.</li>
-                        <li>Former teaching assistant in the Web Development course.</li>
-                        <li>Participant in scientific research on data analysis using machine learning: I had the opportunity to delve into data analysis, considering the use of machine learning to enhance the process. Techniques such as clustering and decision trees have already been employed in the development of the research project.</li>
-                    </ul>
+                    <Text as='b'>Cientista da Computação! (quase)</Text>
+                    <Text>Graduando em Ciência da Computação, atualmente no 4° semestre.</Text>
+                    <Text>Ex-Monitor na Matéria de <b>Desenvolvimento Web.</b></Text>
+                    <Text mx={20}>Participante em iniciação científica sobre análise de dados usando <b>aprendizado de máquina</b>: Tive a oportunidade de me envolver na análise de dados, explorando o uso de machine learning para tornar o processo de análise mais eficiente. Utilizamos técnicas como <b>clustering</b> e <b>árvore de decisão</b> no desenvolvimento do projeto de pesquisa.</Text>
                 </TabPanel>
             </TabPanels>
         </Tabs>
