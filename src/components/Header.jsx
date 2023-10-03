@@ -47,7 +47,7 @@ const Header = () => {
             padding='10'
             fontSize='17'
             justifyContent='center'
-            maxW={{ base: '100%', sm: '1850px' }}
+            maxW={{ base: '100%', sm: '100%' }}
             display={{ base: 'block', sm: 'flex ' }}
         >
             {
