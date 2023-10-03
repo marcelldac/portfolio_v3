@@ -10,6 +10,7 @@ import thumbnailDownloader from '../assets/thumbnailDownloader.png';
 import mikeshelp from '../assets/mikeshelp.png';
 import qCoder from '../assets/qCoder.png';
 import reactNativeGuide from '../assets/reactNativeGuide.png';
+import numberIdentifier from '../assets/numberIdentifier.png';
 
 export default function Projects() {
 
@@ -20,7 +21,8 @@ export default function Projects() {
         thumbnailDownloader,
         crudSpringBoot,
         dacti,
-        learnMore
+        learnMore,
+        numberIdentifier
     }
 
     const desc = {
@@ -30,7 +32,8 @@ export default function Projects() {
         thumbnailDownloader: 'Um site que gera uma thumbnail a partir de um link e a disponibiliza para download, construído usando Python e o framework Flask.',
         crudSpringBoot: 'O Sistema de Gerenciamento de Usuários é uma aplicação Java Spring Boot robusta projetada para simplificar o gerenciamento de dados de usuário dentro de uma organização. Este projeto implementa uma funcionalidade completa de CRUD (Criar, Ler, Atualizar, Excluir) para a entidade de usuário, oferecendo uma maneira segura e eficiente de lidar com informações de usuário.',
         dacti: 'DacTI é o meu projeto que comercializa websites e projetos de TI em geral, a preços acessíveis!',
-        learnMore: "Simplifique seu Aprendizado: Aprenda rapidamente com contato direto com professores. O front-end foi construído em ReactJs, o back-end foi desenvolvido em NodeJs, e utiliza um banco de dados PostgreSQL. Foram estabelecidos relacionamentos entre as entidades professor e publicações (para que os professores possam ter publicações) e professor e disciplinas (para que o professor possa ensinar uma ou mais disciplinas). Ambos os relacionamentos são de '1 para muitos' (1:n). Redux é usado para persistir o login do coordenador."
+        learnMore: "Simplifique seu Aprendizado: Aprenda rapidamente com contato direto com professores. O front-end foi construído em ReactJs, o back-end foi desenvolvido em NodeJs, e utiliza um banco de dados PostgreSQL. Foram estabelecidos relacionamentos entre as entidades professor e publicações (para que os professores possam ter publicações) e professor e disciplinas (para que o professor possa ensinar uma ou mais disciplinas). Ambos os relacionamentos são de '1 para muitos' (1:n). Redux é usado para persistir o login do coordenador.",
+        numberIdentifier: 'Um projeto que identifica a localização e operadora do número digitado pelo usuário.',
     }
 
     const links = {
@@ -40,7 +43,8 @@ export default function Projects() {
         thumbnailDownloader: 'https://github.com/marcelldac/thumbnail-downloader',
         crudSpringBoot: 'https://github.com/marcelldac/crud_usuarios',
         dacti: 'https://dacti-xi.vercel.app/',
-        learnMore: 'https://github.com/marcelldac/client_learn_more_system'
+        learnMore: 'https://github.com/marcelldac/client_learn_more_system',
+        numberIdentifier: 'https://github.com/marcelldac/number_identifier',
     }
 
     return (
@@ -52,6 +56,7 @@ export default function Projects() {
             <Project title='Biblioteca Q-Coder' src={img.qCoder} description={desc.qCoder} skills={[skills.typescript, skills.react_js]} link={links.qCoder} />
             <Project title='MikesHelp' src={img.mikeshelp} description={desc.mikeshelp} skills={[skills.javascript, skills.react_native]} link={links.mikeshelp} />
             <Project title='Downloader de Thumbnails' src={img.thumbnailDownloader} description={desc.thumbnailDownloader} skills={[skills.python, skills.flask]} link={links.thumbnailDownloader} />
+            <Project title='Identificador de Número' src={img.numberIdentifier} description={desc.numberIdentifier} skills={[skills.python]} link={links.thumbnailDownloader} />
         </Box>
     )
 }
