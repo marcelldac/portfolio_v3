@@ -56,7 +56,7 @@ export default function Projects() {
             <Project title='Biblioteca Q-Coder' src={img.qCoder} description={desc.qCoder} skills={[skills.typescript, skills.react_js]} link={links.qCoder} />
             <Project title='MikesHelp' src={img.mikeshelp} description={desc.mikeshelp} skills={[skills.javascript, skills.react_native]} link={links.mikeshelp} />
             <Project title='Downloader de Thumbnails' src={img.thumbnailDownloader} description={desc.thumbnailDownloader} skills={[skills.python, skills.flask]} link={links.thumbnailDownloader} />
-            <Project title='Identificador de Número' src={img.numberIdentifier} description={desc.numberIdentifier} skills={[skills.python]} link={links.thumbnailDownloader} />
+            <Project title='Identificador de Número' src={img.numberIdentifier} description={desc.numberIdentifier} skills={[skills.python]} link={links.numberIdentifier} />
         </Box>
     )
 }
