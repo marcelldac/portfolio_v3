@@ -28,6 +28,8 @@ export default function Skills() {
         'springboot': 0,
         'node': 0,
         'postgresql': 0,
+        'django': 0,
+        'mysql': 0,
     });
 
     function occurrCounter(array, param) {
@@ -69,6 +71,7 @@ export default function Skills() {
                     {/* Back */}
                     <Skill icon={skill.node} title='Node.js' quantity={skillQuant.node} />
                     <Skill icon={skill.spring_boot} title='Spring Boot' quantity={skillQuant.springboot} />
+                    <Skill icon={skill.django} title='Django' quantity={skillQuant.django} />
                     {/* Front */}
                     <Skill icon={skill.chakraui} title='Chakra-UI' quantity={skillQuant.chakraui} />
                     <Skill icon={skill.react_js} title='React.js' quantity={skillQuant.reactjs} />
@@ -76,6 +79,7 @@ export default function Skills() {
                     <Skill icon={skill.flask} title='Flask' quantity={skillQuant.flask} />
                     {/* Dbs */}
                     <Skill icon={skill.postgresql} title='PostgreSQL' quantity={skillQuant.postgresql} />
+                    <Skill icon={skill.mysql} title='MySQL' quantity={skillQuant.mysql} />
                     {/* Languages */}
                     <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
                     <Skill icon={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
