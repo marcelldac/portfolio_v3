@@ -11,6 +11,7 @@ import {
     Box,
     Flex,
 } from '@chakra-ui/react';
+import MoreThanOneProjectModal from './MoreThanOneProjectModal';
 
 export default function Project(props) {
 
@@ -18,6 +19,7 @@ export default function Project(props) {
 
     return (
         <Card direction={{ base: 'column', sm: 'row' }} variant='elevated' mt={20}>
+            
             <Image
                 objectFit='cover'
                 maxW={{ base: '100%', sm: '200px' }}
@@ -41,9 +43,13 @@ export default function Project(props) {
                     </Flex>
                 </CardBody>
                 <CardFooter>
-                    <a href={props.link} target="_blank" rel="noreferrer">
-                        <Button variant='solid' colorScheme='green' isDisabled={props.link == '' ? true : false}>See More</Button>
-                    </a>
+                    {Array.isArray(props.link) ? (
+                        <MoreThanOneProjectModal linkFront={props.link[0]} linkBack={props.link[1]}/>
+                    ) : (
+                        <a href={props.link} target="_blank" rel="noreferrer">
+                            <Button variant='solid' colorScheme='green' isDisabled={props.link == '' ? true : false}>Ver mais</Button>
+                        </a>
+                    )}
                 </CardFooter>
             </Stack>
         </Card>
