@@ -34,7 +34,7 @@ export default function Projects() {
         thumbnailDownloader: 'Um site que gera uma thumbnail a partir de um link e a disponibiliza para download, construído usando Python e o framework Flask.',
         crudSpringBoot: 'O Sistema de Gerenciamento de Usuários é uma aplicação Java Spring Boot robusta projetada para simplificar o gerenciamento de dados de usuário dentro de uma organização. Este projeto implementa uma funcionalidade completa de CRUD (Criar, Ler, Atualizar, Excluir) para a entidade de usuário, oferecendo uma maneira segura e eficiente de lidar com informações de usuário.',
         dacti: 'DacTI é o meu projeto que comercializa websites e projetos de TI em geral, a preços acessíveis!',
-        learnMore: "Simplifique seu Aprendizado: Aprenda rapidamente com contato direto com professores. O front-end foi construído em ReactJs, o back-end foi desenvolvido em NodeJs, e utiliza um banco de dados PostgreSQL. Foram estabelecidos relacionamentos entre as entidades professor e publicações (para que os professores possam ter publicações) e professor e disciplinas (para que o professor possa ensinar uma ou mais disciplinas). Ambos os relacionamentos são de '1 para muitos' (1:n). Redux é usado para persistir o login do coordenador.",
+        learnMore: "Aplicação Back-end desenvolvida em NodeJs, utiliza o banco de dados PostgreSQL. Foram estabelecidos relacionamentos entre as entidades professor e publicações (para que os professores possam ter publicações) e professor e disciplinas (para que o professor possa ensinar uma ou mais disciplinas). Ambos os relacionamentos são de '1 para muitos' (1:n).",
         numberIdentifier: 'Um projeto que identifica a localização e operadora do número digitado pelo usuário.',
         suCelso: 'Um projeto acadêmico que simula uma interface funcional de uma escola. Com relacionamentos entre entidades como turmas, professores e cursos. Similar ao projeto Learn More.'
     }
@@ -46,7 +46,7 @@ export default function Projects() {
         thumbnailDownloader: 'https://github.com/marcelldac/thumbnail-downloader',
         crudSpringBoot: 'https://github.com/marcelldac/crud_usuarios',
         dacti: 'https://dacti-xi.vercel.app/',
-        learnMore: ['https://github.com/marcelldac/client_learn_more_system','https://github.com/marcelldac/server_learn_more_system'],
+        learnMore: 'https://github.com/marcelldac/server_learn_more_system',    
         numberIdentifier: 'https://github.com/marcelldac/number_identifier',
         suCelso: ['https://github.com/sucelsosys/Sucelso-Front','https://github.com/marcelldac/server_sucelso_system']
     }
