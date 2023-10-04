@@ -11,6 +11,7 @@ import mikeshelp from '../assets/mikeshelp.png';
 import qCoder from '../assets/qCoder.png';
 import reactNativeGuide from '../assets/reactNativeGuide.png';
 import numberIdentifier from '../assets/numberIdentifier.png';
+import suCelso from '../assets/suCelso.png';
 
 export default function Projects() {
 
@@ -22,7 +23,8 @@ export default function Projects() {
         crudSpringBoot,
         dacti,
         learnMore,
-        numberIdentifier
+        numberIdentifier,
+        suCelso
     }
 
     const desc = {
@@ -34,6 +36,7 @@ export default function Projects() {
         dacti: 'DacTI é o meu projeto que comercializa websites e projetos de TI em geral, a preços acessíveis!',
         learnMore: "Simplifique seu Aprendizado: Aprenda rapidamente com contato direto com professores. O front-end foi construído em ReactJs, o back-end foi desenvolvido em NodeJs, e utiliza um banco de dados PostgreSQL. Foram estabelecidos relacionamentos entre as entidades professor e publicações (para que os professores possam ter publicações) e professor e disciplinas (para que o professor possa ensinar uma ou mais disciplinas). Ambos os relacionamentos são de '1 para muitos' (1:n). Redux é usado para persistir o login do coordenador.",
         numberIdentifier: 'Um projeto que identifica a localização e operadora do número digitado pelo usuário.',
+        suCelso: 'Um projeto acadêmico que simula uma interface funcional de uma escola. Com relacionamentos entre entidades como turmas, professores e cursos. Similar ao projeto Learn More.'
     }
 
     const links = {
@@ -43,12 +46,17 @@ export default function Projects() {
         thumbnailDownloader: 'https://github.com/marcelldac/thumbnail-downloader',
         crudSpringBoot: 'https://github.com/marcelldac/crud_usuarios',
         dacti: 'https://dacti-xi.vercel.app/',
-        learnMore: 'https://github.com/marcelldac/client_learn_more_system',
+        learnMore: ['https://github.com/marcelldac/client_learn_more_system','https://github.com/marcelldac/server_learn_more_system'],
         numberIdentifier: 'https://github.com/marcelldac/number_identifier',
+        suCelso: ['https://github.com/sucelsosys/Sucelso-Front','https://github.com/marcelldac/server_sucelso_system']
     }
+
+    const sla = () => {console.log(links.suCelso.length)};
+    sla();
 
     return (
         <Box m={30}>
+            <Project title='SuCelso School' src={img.suCelso} description={desc.suCelso} skills={[skills.javascript, skills.react_js, skills.node, skills.mysql]} link={[links.suCelso[0], links.suCelso[1]]}/>
             <Project title='Learn More' src={img.learnMore} description={desc.learnMore} skills={[skills.javascript, skills.react_js, skills.node, skills.postgresql]} link={links.learnMore} />
             <Project title='DacTI' src={img.dacti} description={desc.dacti} skills={[skills.javascript, skills.react_js]} link={links.dacti} />
             <Project title="CRUD De Usuários" src={img.crudSpringBoot} description={desc.crudSpringBoot} skills={[skills.java, skills.spring_boot]} link={links.crudSpringBoot} />
