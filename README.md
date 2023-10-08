@@ -1,8 +1,20 @@
-# React + Vite
+# Portfólio v3.0
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Deseja clonar o repositório? Siga o passo-a-passo a seguir:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Passo 1: Clonar o repositório:
+```bash
+git clone https://github.com/marcelldac/portfolio_v3
+```
+### Passo 2: Ir ao diretório:
+```bash
+cd portfolio_v3
+```
+### Passo 3: Instalar as dependências: 
+```bash
+npm i
+```
+### Passo 4: Rodar o projeto:
+```bash
+npm run dev
+```
