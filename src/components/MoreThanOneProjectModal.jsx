@@ -1,12 +1,12 @@
-import { 
+import {
     Button,
     Modal,
-    ModalBody, 
-    ModalCloseButton, 
-    ModalContent, 
-    ModalFooter, 
-    ModalHeader, 
-    ModalOverlay, 
+    ModalBody,
+    ModalCloseButton,
+    ModalContent,
+    ModalFooter,
+    ModalHeader,
+    ModalOverlay,
     useDisclosure
 } from '@chakra-ui/react'
 import { useState } from 'react'
@@ -21,18 +21,18 @@ export default function MoreThanOneProjectModal(props) {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
     const [overlay, setOverlay] = useState(<OverlayOne />)
-  
+
     return (
         <>
             <Button
-                variant='solid' 
-                colorScheme='green'
+                variant='solid'
+                colorScheme='facebook'
                 onClick={() => {
                     setOverlay(<OverlayOne />)
                     onOpen()
                 }}
             >
-          Ver mais
+                Ver mais
             </Button>
             <Modal isCentered isOpen={isOpen} onClose={onClose}>
                 {overlay}
@@ -48,7 +48,7 @@ export default function MoreThanOneProjectModal(props) {
                         </a>
                     </ModalBody>
                     <ModalFooter>
-                        <Button onClick={onClose}>Close</Button>
+                        <Button variant='solid' colorScheme='facebook' onClick={onClose}>Fechar</Button>
                     </ModalFooter>
                 </ModalContent>
             </Modal>

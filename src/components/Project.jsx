@@ -19,7 +19,7 @@ export default function Project(props) {
 
     return (
         <Card direction={{ base: 'column', sm: 'row' }} variant='elevated' mt={20}>
-            
+
             <Image
                 objectFit='cover'
                 maxW={{ base: '100%', sm: '200px' }}
@@ -44,10 +44,10 @@ export default function Project(props) {
                 </CardBody>
                 <CardFooter>
                     {Array.isArray(props.link) ? (
-                        <MoreThanOneProjectModal linkFront={props.link[0]} linkBack={props.link[1]}/>
+                        <MoreThanOneProjectModal linkFront={props.link[0]} linkBack={props.link[1]} />
                     ) : (
                         <a href={props.link} target="_blank" rel="noreferrer">
-                            <Button variant='solid' colorScheme='green' isDisabled={props.link == '' ? true : false}>Ver mais</Button>
+                            <Button variant='solid' colorScheme='facebook' isDisabled={props.link == '' ? true : false}>Ver mais</Button>
                         </a>
                     )}
                 </CardFooter>
