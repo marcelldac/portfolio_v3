@@ -12,6 +12,7 @@ import qCoder from '../assets/qCoder.png';
 import reactNativeGuide from '../assets/reactNativeGuide.png';
 import numberIdentifier from '../assets/numberIdentifier.png';
 import suCelso from '../assets/suCelso.png';
+import schedule from '../assets/schedule.png';
 
 export default function Projects() {
 
@@ -24,7 +25,8 @@ export default function Projects() {
         dacti,
         learnMore,
         numberIdentifier,
-        suCelso
+        suCelso,
+        schedule,
     }
 
     const desc = {
@@ -36,7 +38,8 @@ export default function Projects() {
         dacti: 'DacTI é o meu projeto que comercializa websites e projetos de TI em geral, a preços acessíveis!',
         learnMore: "Aplicação Back-end desenvolvida em NodeJs, utiliza o banco de dados PostgreSQL. Foram estabelecidos relacionamentos entre as entidades professor e publicações (para que os professores possam ter publicações) e professor e disciplinas (para que o professor possa ensinar uma ou mais disciplinas). Ambos os relacionamentos são de '1 para muitos' (1:n).",
         numberIdentifier: 'Um projeto que identifica a localização e operadora do número digitado pelo usuário.',
-        suCelso: 'Um projeto acadêmico que simula uma interface funcional de uma escola. Com relacionamentos entre entidades como turmas, professores e cursos. Similar ao projeto Learn More.'
+        suCelso: 'Um projeto acadêmico que simula uma interface funcional de uma escola. Com relacionamentos entre entidades como turmas, professores e cursos. Similar ao projeto Learn More.',
+        schedule: 'Meu primeiro projeto como freelancer. Se trata de uma agenda, onde o usuário pode criar, atualizar e deletar eventos incluindo nome, data, assunto e observação',
     }
 
     const links = {
@@ -48,7 +51,8 @@ export default function Projects() {
         dacti: 'https://dacti-xi.vercel.app/',
         learnMore: 'https://github.com/marcelldac/server_learn_more_system',
         numberIdentifier: 'https://github.com/marcelldac/number_identifier',
-        suCelso: ['https://github.com/sucelsosys/Sucelso-Front', 'https://github.com/marcelldac/server_sucelso_system']
+        suCelso: ['https://github.com/sucelsosys/Sucelso-Front', 'https://github.com/marcelldac/server_sucelso_system'],
+        schedule: '',
     }
 
     const sla = () => { console.log(links.suCelso.length) };
@@ -65,6 +69,7 @@ export default function Projects() {
             <Project title='MikesHelp' src={img.mikeshelp} description={desc.mikeshelp} skills={[skills.javascript, skills.react_native]} link={links.mikeshelp} />
             <Project title='Downloader de Thumbnails' src={img.thumbnailDownloader} description={desc.thumbnailDownloader} skills={[skills.python, skills.flask]} link={links.thumbnailDownloader} />
             <Project title='Identificador de Número' src={img.numberIdentifier} description={desc.numberIdentifier} skills={[skills.python]} link={links.numberIdentifier} />
+            <Project title='Aplicativo de Agenda' src={img.schedule} description={desc.schedule} skills={[skills.python]} link={links.schedule} />
         </Box>
     )
 }
