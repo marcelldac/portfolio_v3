@@ -30,6 +30,7 @@ export default function Skills() {
         'postgresql': 0,
         'django': 0,
         'mysql': 0,
+        'csharp': 0,
     });
 
     function occurrCounter(array, param) {
@@ -68,24 +69,28 @@ export default function Skills() {
                             <Th>Quantos Projetos?</Th>
                         </Tr>
                     </Thead>
-                    {/* Back */}
-                    <Skill icon={skill.node} title='Node.js' quantity={skillQuant.node} />
-                    <Skill icon={skill.spring_boot} title='Spring Boot' quantity={skillQuant.springboot} />
-                    <Skill icon={skill.django} title='Django' quantity={skillQuant.django} />
-                    {/* Front */}
-                    <Skill icon={skill.chakraui} title='Chakra-UI' quantity={skillQuant.chakraui} />
-                    <Skill icon={skill.react_js} title='React.js' quantity={skillQuant.reactjs} />
-                    <Skill icon={skill.react_native} title='React Native' quantity={skillQuant.reactnative} />
-                    <Skill icon={skill.flask} title='Flask' quantity={skillQuant.flask} />
-                    {/* Dbs */}
-                    <Skill icon={skill.postgresql} title='PostgreSQL' quantity={skillQuant.postgresql} />
-                    <Skill icon={skill.mysql} title='MySQL' quantity={skillQuant.mysql} />
-                    {/* Languages */}
+                    {/* C# and Frameworks */}
+                    <Skill icon={skill.csharp} title="C#" quantity={skillQuant.csharp} />
+                    {/* Javascript, Typescript and Frameworks */}
                     <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
                     <Skill icon={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
+                    <Skill icon={skill.node} title='Node.js' quantity={skillQuant.node} />
+                    <Skill icon={skill.react_js} title='React.js' quantity={skillQuant.reactjs} />
+                    <Skill icon={skill.react_native} title='React Native' quantity={skillQuant.reactnative} />
+                    <Skill icon={skill.chakraui} title='Chakra-UI' quantity={skillQuant.chakraui} />
+                    {/* Java and Frameworks */}
                     <Skill icon={skill.java} title='Java' quantity={skillQuant.jv} />
-                    <Skill icon={skill.golang} title='Golang' quantity={skillQuant.golang} />
+                    <Skill icon={skill.spring_boot} title='Spring Boot' quantity={skillQuant.springboot} />
+                    {/* Python and Frameworks */}
                     <Skill icon={skill.python} title='Python' quantity={skillQuant.python} />
+                    <Skill icon={skill.django} title='Django' quantity={skillQuant.django} />
+                    <Skill icon={skill.flask} title='Flask' quantity={skillQuant.flask} />
+                    {/* Golang and Frameworks */}
+                    <Skill icon={skill.golang} title='Golang' quantity={skillQuant.golang} />
+                    {/* Databases */}
+                    <Skill icon={skill.postgresql} title='PostgreSQL' quantity={skillQuant.postgresql} />
+                    <Skill icon={skill.mysql} title='MySQL' quantity={skillQuant.mysql} />
+
                 </Table>
             </TableContainer>
         </Box>
