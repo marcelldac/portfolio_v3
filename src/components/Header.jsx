@@ -52,15 +52,15 @@ const Header = () => {
         >
             {
                 sidebarNavItems.map((item, index) => (
-                    <Link
-                        to={item.to}
-                        key={index}
-                        target={item.target}
-                    >
-                        <Flex color='white' direction='row' pr='90px'>
+                    <Flex px='30px' color='white'>
+                        <Link
+                            to={item.to}
+                            key={index}
+                            target={item.target}
+                        >
                             <Text _hover={{ color: 'blue.500' }}>{item.display}</Text>
-                        </Flex>
-                    </Link>
+                        </Link>
+                    </Flex >
                 ))
             }
         </Flex >
