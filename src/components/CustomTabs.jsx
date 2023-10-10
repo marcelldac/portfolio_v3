@@ -38,14 +38,14 @@ export default function CustomTabs() {
             <TabPanels>
                 <TabPanel fontSize={17}>
                     <Text as='b'>Na Unijorge (Salvador):</Text>
-                    <p>Monitorias semanais de lógica de programação durante um semestre (2023.1).</p>
-                    <p>HTML5 e CSS3: Crie seu primeiro site.</p>
-                    <p>Merge Sort: Entenda estrutura de dados de forma simples.</p>
-                    <p>ReactJs: Criando seu primeiro WebApp (Parte 1 e 2).</p>
-                    <p>ReactJs: Gerenciamento de Estado com Redux.</p>
-                    <p>NodeJs: Criando um API de upload de imagens utilizando o MongoDB.</p>
+                    <Text>Monitorias semanais de lógica de programação durante um semestre (2023.1).</Text>
+                    <Text>HTML5 e CSS3: Crie seu primeiro site.</Text>
+                    <Text>Merge Sort: Entenda estrutura de dados de forma simples.</Text>
+                    <Text>ReactJs: Criando seu primeiro WebApp (Parte 1 e 2).</Text>
+                    <Text>ReactJs: Gerenciamento de Estado com Redux.</Text>
+                    <Text>NodeJs: Criando um API de upload de imagens utilizando o MongoDB.</Text>
                     <Text as='b'>Na Unijorge (Camaçari):</Text>
-                    <p>Lógica de Programação: Iniciando no mundo da programação.</p>
+                    <Text>Lógica de Programação: Iniciando no mundo da programação.</Text>
                 </TabPanel>
                 <TabPanel fontSize={17}>
                     <Text as='b'>Desenvolvedor Full-Stack</Text>
