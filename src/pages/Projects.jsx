@@ -30,7 +30,7 @@ export default function Projects() {
     const desc = {
         reactNativeGuide: 'Um guia para iniciantes em React Native para aqueles que desejam começar com o framework. React Native foi o primeiro framework com o qual trabalhei. Inicialmente, encontrei algumas dificuldades para entender tópicos importantes como o Async Storage e o Redux Saga. Criei este guia para que as pessoas não se sintam tão perdidas quanto eu me senti quando comecei.',
         qCoder: 'Uma biblioteca NPM com interface de usuário que gera um código QR personalizado a partir de qualquer link fornecido pelo usuário. Feita em Typescript. Uma biblioteca NPM é uma forma de compartilhar código em JavaScript com outros desenvolvedores, permitindo que eles usem essa funcionalidade em seus próprios projetos. Nesse caso, a biblioteca possui uma interface de usuário construída com React.js e tem a capacidade de criar códigos QR personalizados a partir de URLs fornecidas pelos usuários. Isso pode ser útil em diversos contextos, como aplicativos móveis, sites ou qualquer aplicação que necessite de geração de QR codes a partir de links fornecidos dinamicamente.',
-        mikeshelp: 'Um protótipo inicial de um aplicativo relacionado à saúde mental que estou desenvolvendo. Criado utilizando React Native e Styled Components.',
+        mikeshelp: 'Um protótipo inicial de um aplicativo relacionado à saúde mental, Atualmente em processo de desenvolvimento.',
         thumbnailDownloader: 'Um site que gera uma thumbnail a partir de um link e a disponibiliza para download, construído usando Python e o framework Flask.',
         crudSpringBoot: 'O Sistema de Gerenciamento de Usuários é uma aplicação Java Spring Boot robusta projetada para simplificar o gerenciamento de dados de usuário dentro de uma organização. Este projeto implementa uma funcionalidade completa de CRUD (Criar, Ler, Atualizar, Excluir) para a entidade de usuário, oferecendo uma maneira segura e eficiente de lidar com informações de usuário.',
         dacti: 'DacTI é o meu projeto que comercializa websites e projetos de TI em geral, a preços acessíveis!',
@@ -46,17 +46,17 @@ export default function Projects() {
         thumbnailDownloader: 'https://github.com/marcelldac/thumbnail-downloader',
         crudSpringBoot: 'https://github.com/marcelldac/crud_usuarios',
         dacti: 'https://dacti-xi.vercel.app/',
-        learnMore: 'https://github.com/marcelldac/server_learn_more_system',    
+        learnMore: 'https://github.com/marcelldac/server_learn_more_system',
         numberIdentifier: 'https://github.com/marcelldac/number_identifier',
-        suCelso: ['https://github.com/sucelsosys/Sucelso-Front','https://github.com/marcelldac/server_sucelso_system']
+        suCelso: ['https://github.com/sucelsosys/Sucelso-Front', 'https://github.com/marcelldac/server_sucelso_system']
     }
 
-    const sla = () => {console.log(links.suCelso.length)};
+    const sla = () => { console.log(links.suCelso.length) };
     sla();
 
     return (
         <Box m={30}>
-            <Project title='SuCelso School' src={img.suCelso} description={desc.suCelso} skills={[skills.javascript, skills.react_js, skills.node, skills.mysql]} link={[links.suCelso[0], links.suCelso[1]]}/>
+            <Project title='SuCelso School' src={img.suCelso} description={desc.suCelso} skills={[skills.javascript, skills.react_js, skills.node, skills.mysql]} link={[links.suCelso[0], links.suCelso[1]]} />
             <Project title='Learn More' src={img.learnMore} description={desc.learnMore} skills={[skills.javascript, skills.react_js, skills.node, skills.postgresql]} link={links.learnMore} />
             <Project title='DacTI' src={img.dacti} description={desc.dacti} skills={[skills.javascript, skills.react_js]} link={links.dacti} />
             <Project title="CRUD De Usuários" src={img.crudSpringBoot} description={desc.crudSpringBoot} skills={[skills.java, skills.spring_boot]} link={links.crudSpringBoot} />
