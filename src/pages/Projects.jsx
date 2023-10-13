@@ -1,4 +1,5 @@
 import { Box } from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 import Project from '../components/Project';
 import skills from '../utils/skills';
@@ -60,16 +61,26 @@ export default function Projects() {
 
     return (
         <Box m={30}>
-            <Project title='SuCelso School' src={img.suCelso} description={desc.suCelso} skills={[skills.javascript, skills.react_js, skills.node, skills.mysql]} link={links.suCelso} />
-            <Project title='Learn More' src={img.learnMore} description={desc.learnMore} skills={[skills.javascript, skills.react_js, skills.node, skills.postgresql]} link={links.learnMore} />
-            <Project title='DacTI' src={img.dacti} description={desc.dacti} skills={[skills.javascript, skills.react_js]} link={links.dacti} />
-            <Project title="CRUD De Usuários" src={img.crudSpringBoot} description={desc.crudSpringBoot} skills={[skills.java, skills.spring_boot]} link={links.crudSpringBoot} />
-            <Project title='Guia para React Native' src={img.reactNativeGuide} description={desc.reactNativeGuide} skills={[skills.react_native, skills.javascript]} link={links.reactNativeGuide} />
-            <Project title='Biblioteca Q-Coder' src={img.qCoder} description={desc.qCoder} skills={[skills.typescript, skills.react_js]} link={links.qCoder} />
-            <Project title='MikesHelp' src={img.mikeshelp} description={desc.mikeshelp} skills={[skills.javascript, skills.react_native]} link={links.mikeshelp} />
-            <Project title='Downloader de Thumbnails' src={img.thumbnailDownloader} description={desc.thumbnailDownloader} skills={[skills.python, skills.flask]} link={links.thumbnailDownloader} />
-            <Project title='Identificador de Número' src={img.numberIdentifier} description={desc.numberIdentifier} skills={[skills.python]} link={links.numberIdentifier} />
-            <Project title='Aplicativo de Agenda' src={img.schedule} description={desc.schedule} skills={[skills.python]} link={links.schedule} />
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                    duration: 0.8,
+                    delay: 0.5,
+                    ease: [0, 0.71, 0.2, 1.01]
+                }}
+            >
+                <Project title='SuCelso School' src={img.suCelso} description={desc.suCelso} skills={[skills.javascript, skills.react_js, skills.node, skills.mysql]} link={links.suCelso} />
+                <Project title='Learn More' src={img.learnMore} description={desc.learnMore} skills={[skills.javascript, skills.react_js, skills.node, skills.postgresql]} link={links.learnMore} />
+                <Project title='DacTI' src={img.dacti} description={desc.dacti} skills={[skills.javascript, skills.react_js]} link={links.dacti} />
+                <Project title="CRUD De Usuários" src={img.crudSpringBoot} description={desc.crudSpringBoot} skills={[skills.java, skills.spring_boot]} link={links.crudSpringBoot} />
+                <Project title='Guia para React Native' src={img.reactNativeGuide} description={desc.reactNativeGuide} skills={[skills.react_native, skills.javascript]} link={links.reactNativeGuide} />
+                <Project title='Biblioteca Q-Coder' src={img.qCoder} description={desc.qCoder} skills={[skills.typescript, skills.react_js]} link={links.qCoder} />
+                <Project title='MikesHelp' src={img.mikeshelp} description={desc.mikeshelp} skills={[skills.javascript, skills.react_native]} link={links.mikeshelp} />
+                <Project title='Downloader de Thumbnails' src={img.thumbnailDownloader} description={desc.thumbnailDownloader} skills={[skills.python, skills.flask]} link={links.thumbnailDownloader} />
+                <Project title='Identificador de Número' src={img.numberIdentifier} description={desc.numberIdentifier} skills={[skills.python]} link={links.numberIdentifier} />
+                <Project title='Aplicativo de Agenda' src={img.schedule} description={desc.schedule} skills={[skills.python]} link={links.schedule} />
+            </motion.div>
         </Box>
     )
 }

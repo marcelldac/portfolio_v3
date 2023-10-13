@@ -7,7 +7,8 @@ import {
     Th,
     TableContainer,
     Box,
-} from '@chakra-ui/react'
+} from '@chakra-ui/react';
+import { motion } from 'framer-motion';
 
 import Skill from '../components/Skill';
 import skill from '../utils/skills';
@@ -60,39 +61,49 @@ export default function Skills() {
 
     return (
         <Box display='flex' justifyContent='center'>
-            <TableContainer>
-                <Table variant='simple'>
-                    <Thead>
-                        <Tr>
-                            <Th>Icone</Th>
-                            <Th>Nome</Th>
-                            <Th>Quantos Projetos?</Th>
-                        </Tr>
-                    </Thead>
-                    {/* C# and Frameworks */}
-                    <Skill icon={skill.csharp} title="C#" quantity={skillQuant.csharp} />
-                    {/* Javascript, Typescript and Frameworks */}
-                    <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
-                    <Skill icon={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
-                    <Skill icon={skill.node} title='Node.js' quantity={skillQuant.node} />
-                    <Skill icon={skill.react_js} title='React.js' quantity={skillQuant.reactjs} />
-                    <Skill icon={skill.react_native} title='React Native' quantity={skillQuant.reactnative} />
-                    <Skill icon={skill.chakraui} title='Chakra-UI' quantity={skillQuant.chakraui} />
-                    {/* Java and Frameworks */}
-                    <Skill icon={skill.java} title='Java' quantity={skillQuant.jv} />
-                    <Skill icon={skill.spring_boot} title='Spring Boot' quantity={skillQuant.springboot} />
-                    {/* Python and Frameworks */}
-                    <Skill icon={skill.python} title='Python' quantity={skillQuant.python} />
-                    <Skill icon={skill.django} title='Django' quantity={skillQuant.django} />
-                    <Skill icon={skill.flask} title='Flask' quantity={skillQuant.flask} />
-                    {/* Golang and Frameworks */}
-                    <Skill icon={skill.golang} title='Golang' quantity={skillQuant.golang} />
-                    {/* Databases */}
-                    <Skill icon={skill.postgresql} title='PostgreSQL' quantity={skillQuant.postgresql} />
-                    <Skill icon={skill.mysql} title='MySQL' quantity={skillQuant.mysql} />
+            <motion.div
+                initial={{ opacity: 0, scale: 0.5 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                    duration: 0.8,
+                    delay: 0.5,
+                    ease: [0, 0.71, 0.2, 1.01]
+                }}
+            >
+                <TableContainer>
+                    <Table variant='simple'>
+                        <Thead>
+                            <Tr>
+                                <Th>Icone</Th>
+                                <Th>Nome</Th>
+                                <Th>Quantos Projetos?</Th>
+                            </Tr>
+                        </Thead>
+                        {/* C# and Frameworks */}
+                        <Skill icon={skill.csharp} title="C#" quantity={skillQuant.csharp} />
+                        {/* Javascript, Typescript and Frameworks */}
+                        <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
+                        <Skill icon={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
+                        <Skill icon={skill.node} title='Node.js' quantity={skillQuant.node} />
+                        <Skill icon={skill.react_js} title='React.js' quantity={skillQuant.reactjs} />
+                        <Skill icon={skill.react_native} title='React Native' quantity={skillQuant.reactnative} />
+                        <Skill icon={skill.chakraui} title='Chakra-UI' quantity={skillQuant.chakraui} />
+                        {/* Java and Frameworks */}
+                        <Skill icon={skill.java} title='Java' quantity={skillQuant.jv} />
+                        <Skill icon={skill.spring_boot} title='Spring Boot' quantity={skillQuant.springboot} />
+                        {/* Python and Frameworks */}
+                        <Skill icon={skill.python} title='Python' quantity={skillQuant.python} />
+                        <Skill icon={skill.django} title='Django' quantity={skillQuant.django} />
+                        <Skill icon={skill.flask} title='Flask' quantity={skillQuant.flask} />
+                        {/* Golang and Frameworks */}
+                        <Skill icon={skill.golang} title='Golang' quantity={skillQuant.golang} />
+                        {/* Databases */}
+                        <Skill icon={skill.postgresql} title='PostgreSQL' quantity={skillQuant.postgresql} />
+                        <Skill icon={skill.mysql} title='MySQL' quantity={skillQuant.mysql} />
 
-                </Table>
-            </TableContainer>
+                    </Table>
+                </TableContainer>
+            </motion.div>
         </Box>
     )
 }
