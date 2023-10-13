@@ -10,6 +10,7 @@ import CustomTabs from '../components/CustomTabs';
 import Form from '../components/Form';
 
 import { motion } from "framer-motion";
+import FastCounter from '../components/FastCounter';
 
 const Title = ({ children }) => {
     return <Text fontSize='30' color='gray.700' m={10}>{children}</Text>
@@ -26,6 +27,25 @@ const Subtitle = ({ children, onClick, _hover, cursor, textDecoration }) => {
         _hover={_hover}
         textDecoration={textDecoration}
     >{children}</Text>
+}
+
+const CounterComponent = ({ children }) => {
+    return (
+        <Flex
+            fontSize={20}
+            m={{ base: '1em', sm: '1em' }}
+            color='#EBF8FF'
+            bgColor='#2C5282'
+            borderRadius={30}
+            justify={{ base: 'space-around', sm: 'center' }}
+            alignItems='center'
+            w={{ base: '13em', sm: 'auto' }}
+            h={{ base: '4m', sm: '1em' }}
+            p={6}
+        >
+            {children}
+        </Flex>
+    )
 }
 
 export default function Home() {
@@ -52,6 +72,19 @@ export default function Home() {
                             textDecoration='underline'
                             onClick={() => window.scroll({ top: 500, behavior: 'smooth' })}
                         >Tenha um contato direto comigo!</Subtitle>
+                        <CounterComponent>
+                            <FastCounter quantity={4000} /> {/* 4380 = 2y * 6h/day  */}
+                            <Text ml={2}>Horas  de código!</Text>
+                        </CounterComponent>
+                        <CounterComponent>
+                            <FastCounter quantity={3} />
+                            <Text ml={2}>Empresas utilizam ou utilizaram meus serviços!</Text>
+                        </CounterComponent>
+                        <CounterComponent>
+                            <FastCounter quantity={2} />
+                            <Text ml={2}>Anos na área!</Text>
+                        </CounterComponent>
+
                     </Box>
                     <Box
                         textAlign='center'
