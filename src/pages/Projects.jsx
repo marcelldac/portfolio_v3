@@ -51,7 +51,7 @@ export default function Projects() {
         dacti: 'https://dacti-xi.vercel.app/',
         learnMore: 'https://github.com/marcelldac/server_learn_more_system',
         numberIdentifier: 'https://github.com/marcelldac/number_identifier',
-        suCelso: ['https://github.com/sucelsosys/Sucelso-Front', 'https://github.com/marcelldac/server_sucelso_system'],
+        suCelso: 'https://github.com/marcelldac/server_sucelso_system',
         schedule: '',
     }
 
@@ -60,7 +60,7 @@ export default function Projects() {
 
     return (
         <Box m={30}>
-            <Project title='SuCelso School' src={img.suCelso} description={desc.suCelso} skills={[skills.javascript, skills.react_js, skills.node, skills.mysql]} link={[links.suCelso[0], links.suCelso[1]]} />
+            <Project title='SuCelso School' src={img.suCelso} description={desc.suCelso} skills={[skills.javascript, skills.react_js, skills.node, skills.mysql]} link={links.suCelso} />
             <Project title='Learn More' src={img.learnMore} description={desc.learnMore} skills={[skills.javascript, skills.react_js, skills.node, skills.postgresql]} link={links.learnMore} />
             <Project title='DacTI' src={img.dacti} description={desc.dacti} skills={[skills.javascript, skills.react_js]} link={links.dacti} />
             <Project title="CRUD De Usuários" src={img.crudSpringBoot} description={desc.crudSpringBoot} skills={[skills.java, skills.spring_boot]} link={links.crudSpringBoot} />
