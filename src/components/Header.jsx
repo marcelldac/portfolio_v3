@@ -10,6 +10,8 @@ import {
     AiFillLinkedin
 } from 'react-icons/ai';
 
+import { motion } from 'framer-motion';
+
 const sidebarNavItems = [
     {
         display: 'Início',
@@ -53,13 +55,17 @@ const Header = () => {
             {
                 sidebarNavItems.map((item, index) => (
                     <Flex px='30px' color='white'>
-                        <Link
-                            to={item.to}
-                            key={index}
-                            target={item.target}
+                        <motion.div
+                            whileTap={{ scale: 1.1 }}
                         >
-                            <Text _hover={{ color: 'blue.500' }}>{item.display}</Text>
-                        </Link>
+                            <Link
+                                to={item.to}
+                                key={index}
+                                target={item.target}
+                            >
+                                <Text _hover={{ color: 'blue.500' }}>{item.display}</Text>
+                            </Link>
+                        </motion.div>
                     </Flex >
                 ))
             }
