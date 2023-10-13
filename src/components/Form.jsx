@@ -1,21 +1,33 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { useForm } from '@formspree/react';
-import { Button, FormControl, FormHelperText, Heading, Input, Spinner, Textarea } from '@chakra-ui/react';
-
-const Submitting = () => { return <Spinner thickness='4px' speed='0.65s' color='green.400' size='xl' /> };
-
-const Succeeded = () => { return <Heading>Enviado</Heading> };
+import {
+    Button,
+    FormControl,
+    FormHelperText,
+    Heading,
+    Input,
+    Textarea,
+    useToast
+} from '@chakra-ui/react';
 
 function Form() {
     const [state, handleSubmit] = useForm('myyqnoze');
+    const toastIdRef = useRef()
+    const toast = useToast()
 
-    if (state.submitting) {
-        return <Submitting />;
-    }
-    if (state.succeeded) {
-        return <Succeeded />;
+    function addToast() {
+        toastIdRef.current = toast({
+            description: 'E-mail enviado com sucesso!',
+            status: 'success',
+            duration: 1000,
+        })
     }
 
+    useEffect(() => {
+        if (state.succeeded) {
+            addToast();
+        }
+    })
     return (
         <>
             <form method="POST" onSubmit={handleSubmit}>
@@ -25,9 +37,15 @@ function Form() {
                     <Input variant='flushed' type="email" name="email" placeholder='Seu e-mail.' mb={10} required />
                     <Input variant='flushed' type="text" name="text" placeholder='Sua empresa.' mb={10} />
                     <Textarea variant='flushed' name="message" placeholder='Sua mensagem.' mb={5} required />
-                    <Button type='submit' colorScheme='facebook' mb={25}>Enviar</Button>
+                    {
+                        state.submitting ? (
+                            <Button isLoading loadingText='Submitting' type='submit' colorScheme='facebook' mb={25}>Enviar</Button>
+                        ) : (
+                            <Button type='submit' colorScheme='facebook' mb={25}>Enviar</Button>
+                        )
+                    }
                 </FormControl>
-            </form>
+            </form >
         </>
     );
 }
