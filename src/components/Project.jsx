@@ -11,6 +11,8 @@ import {
     Box,
     Flex,
 } from '@chakra-ui/react';
+import {motion} from 'framer-motion';
+
 import MoreThanOneProjectModal from './MoreThanOneProjectModal';
 
 export default function Project(props) {
@@ -46,9 +48,14 @@ export default function Project(props) {
                     {Array.isArray(props.link) ? (
                         <MoreThanOneProjectModal linkFront={props.link[0]} linkBack={props.link[1]} />
                     ) : (
-                        <a href={props.link} target="_blank" rel="noreferrer">
-                            <Button variant='solid' colorScheme='facebook' isDisabled={props.link == '' ? true : false}>Ver mais</Button>
-                        </a>
+                        <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+                        >
+                            <a href={props.link} target="_blank" rel="noreferrer">
+                                <Button variant='solid' colorScheme='facebook' isDisabled={props.link == '' ? true : false}>Ver mais</Button>
+                            </a>
+                        </motion.div>
                     )}
                 </CardFooter>
             </Stack>
