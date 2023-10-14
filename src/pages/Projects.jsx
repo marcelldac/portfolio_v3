@@ -2,6 +2,7 @@ import { Box } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 
 import Project from '../components/Project';
+
 import skills from '../utils/skills';
 
 import learnMore from '../assets/learnMore.png';
@@ -43,6 +44,10 @@ export default function Projects() {
         schedule: 'Meu primeiro projeto como freelancer. Se trata de uma agenda, onde o usuário pode criar, atualizar e deletar eventos incluindo nome, data, assunto e observação',
     }
 
+    /* 
+        Em caso de projetos com front-end e back-end em repositorios separados, 
+        colocar primeiro o link do front-end e depois o link do back-end 
+    */
     const links = {
         reactNativeGuide: 'https://github.com/marcelldac/react-native-guide',
         qCoder: 'https://www.npmjs.com/package/q-coder',
@@ -79,7 +84,7 @@ export default function Projects() {
                 <Project title='MikesHelp' src={img.mikeshelp} description={desc.mikeshelp} skills={[skills.javascript, skills.react_native]} link={links.mikeshelp} />
                 <Project title='Downloader de Thumbnails' src={img.thumbnailDownloader} description={desc.thumbnailDownloader} skills={[skills.python, skills.flask]} link={links.thumbnailDownloader} />
                 <Project title='Identificador de Número' src={img.numberIdentifier} description={desc.numberIdentifier} skills={[skills.python]} link={links.numberIdentifier} />
-                <Project title='Aplicativo de Agenda' src={img.schedule} description={desc.schedule} skills={[skills.python]} link={links.schedule} />
+                <Project title='Agenda de encontros' src={img.schedule} description={desc.schedule} skills={[skills.python]} link={links.schedule} />
             </motion.div>
         </Box>
     )
