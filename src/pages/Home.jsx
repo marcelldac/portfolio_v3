@@ -51,7 +51,7 @@ const CounterComponent = ({ children }) => {
 export default function Home() {
 
     return (
-        <Box>
+        <Box overflowY='hidden'>
             <motion.div
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -84,18 +84,17 @@ export default function Home() {
                             <FastCounter quantity={2} />
                             <Text ml={2}>Anos na área!</Text>
                         </CounterComponent>
-
                     </Box>
                     <Box
-                        textAlign='center'
-                        display={{ base: 'flex', sm: 'block' }}
+                        textAlign={{base:'left', sm: 'center'}}
+                        display='block'
                         alignItems='center'
+                        m={10}
                     >
                         <Image
                             src='./me.jpg'
                             borderRadius='full'
                             boxSize='200px'
-                            mt={2}
                             fallbackSrc='https://via.placeholder.com/150'
                             objectFit='cover'
                         />

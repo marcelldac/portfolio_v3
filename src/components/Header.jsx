@@ -1,6 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { Flex, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 import { BiHomeAlt2 } from 'react-icons/bi';
 import { GiSkills } from 'react-icons/gi';
@@ -10,7 +11,7 @@ import {
     AiFillLinkedin
 } from 'react-icons/ai';
 
-import { motion } from 'framer-motion';
+
 
 const sidebarNavItems = [
     {
@@ -49,15 +50,13 @@ const Header = () => {
             padding='10'
             fontSize='17'
             justifyContent='center'
-            maxW={{ base: '100%', sm: '100%' }}
+            maxW='100%'
             display={{ base: 'block', sm: 'flex ' }}
         >
             {
                 sidebarNavItems.map((item, index) => (
                     <Flex px='30px' color='white'>
-                        <motion.div
-                            whileTap={{ scale: 1.1 }}
-                        >
+                        <motion.div whileTap={{ scale: 1.1 }}>
                             <Link
                                 to={item.to}
                                 key={index}

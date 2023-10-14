@@ -23,9 +23,7 @@ const CustomTab = React.forwardRef((props, ref) => {
 
     return (
         <Button __css={styles.tab} {...tabProps} display='flex' >
-            <Flex>
-                {isSelected ? '😎' : '😐'}
-            </Flex>
+            {isSelected ? '😎' : '😐'}
             {tabProps.children}
         </Button>
     )
@@ -37,7 +35,7 @@ export default function CustomTabs() {
 
     return (
         <Tabs textAlign='center'>
-            <TabList display='flex' flexDirection='row' justifyContent='space-evenly'>
+            <TabList display='flex' flexDirection='row' justifyContent={{base:'space-around', sm:'space-evenly'}}>
                 <CustomTab>Como Palestrante</CustomTab>
                 <CustomTab>Como Desenvolvedor</CustomTab>
                 <CustomTab>Como Estudante</CustomTab>
@@ -69,7 +67,7 @@ export default function CustomTabs() {
                     >
                         <p>Back-end {'>'} Front-end</p>
                     </motion.div>
-                    <Text mb={2} mx={20}>Apaixonado por programação. Iniciei meus estudos na área por volta dos 14 anos com a linguagem <b>Python</b>. Hoje em dia, programo principalmente em <b>Javascript</b> utilizando seus frameworks <b>React</b> e <b>Node</b>. Entendo que a linguagem de programação é meramente uma ferramenta. O importante mesmo é a <b>Lógica!</b> Pensando nisso, tenho projetos também em outras linguagens de programação, como <b>Golang</b>, <b>Java</b> e até mesmo o próprio Python.</Text>
+                    <Text mb={2} mx={20}>Apaixonado por programação. Iniciei meus estudos na área por volta dos 14 anos com a linguagem <b>Python</b>. Hoje em dia, programo principalmente em <b>Javascript</b> utilizando seus frameworks <b>React</b> e <b>Node</b>. Entendo que a linguagem de programação é meramente uma ferramenta. O importante mesmo é a <b>Lógica!</b> Pensando nisso, tenho projetos também em outras linguagens de programação, como <b>C#</b>, <b>Java</b> e até mesmo o próprio Python.</Text>
                     <Text>Algumas empresas que utilizam ou já utilizaram meus serviços:</Text>
                     <Flex direction='column'>
                         <Text as='b'>No Trânsito</Text>
