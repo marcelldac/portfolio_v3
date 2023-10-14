@@ -5,11 +5,10 @@ import {
     Image,
     Flex,
 } from '@chakra-ui/react';
+import { motion } from "framer-motion";
 
 import CustomTabs from '../components/CustomTabs';
 import Form from '../components/Form';
-
-import { motion } from "framer-motion";
 import FastCounter from '../components/FastCounter';
 
 const Title = ({ children }) => {
@@ -31,20 +30,26 @@ const Subtitle = ({ children, onClick, _hover, cursor, textDecoration }) => {
 
 const CounterComponent = ({ children }) => {
     return (
-        <Flex
-            fontSize={20}
-            m={{ base: '1em', sm: '1em' }}
-            color='#EBF8FF'
-            bgColor='#2C5282'
-            borderRadius={30}
-            justify={{ base: 'space-around', sm: 'center' }}
-            alignItems='center'
-            w={{ base: '13em', sm: 'auto' }}
-            h={{ base: '4m', sm: '1em' }}
-            p={6}
+        <motion.div
+            className="box"
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
         >
-            {children}
-        </Flex>
+            <Flex
+                fontSize={20}
+                m={{ base: '1em', sm: '1em' }}
+                color='#EBF8FF'
+                bgColor='#2C5282'
+                borderRadius={30}
+                justify={{ base: 'space-around', sm: 'center' }}
+                alignItems='center'
+                w={{ base: '13em', sm: 'auto' }}
+                h={{ base: '4m', sm: '1em' }}
+                p={6}
+            >
+                {children}
+            </Flex>
+        </motion.div>
     )
 }
 
