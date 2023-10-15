@@ -75,7 +75,7 @@ export default function Home() {
                             _hover={{ color: 'blue.500' }}
                             cursor='pointer'
                             textDecoration='underline'
-                            onClick={() => window.scroll({ top: 500, behavior: 'smooth' })}
+                            onClick={() => window.scroll({ top: 900, behavior: 'smooth' })}
                         >Tenha um contato direto comigo!</Subtitle>
                         <CounterComponent>
                             <FastCounter quantity={4000} /> {/* 4380 = 2y * 6h/day  */}
