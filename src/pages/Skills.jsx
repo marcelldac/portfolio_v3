@@ -33,6 +33,7 @@ export default function Skills() {
         'mysql': 0,
         'csharp': 0,
         'nestjs': 0,
+        'graphql': 0,
     });
 
     function occurrCounter(array, param) {
@@ -80,6 +81,7 @@ export default function Skills() {
                                 <Th>Quantos Projetos?</Th>
                             </Tr>
                         </Thead>
+                        <Skill icon={skill.graphql} title="GraphQL" quantity={skillQuant.graphql} />
                         {/* Javascript, Typescript and Frameworks */}
                         <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
                         <Skill icon={skill.typescript} title='Typescript' quantity={skillQuant.typescript} />
