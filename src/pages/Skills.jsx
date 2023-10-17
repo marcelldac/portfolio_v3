@@ -34,6 +34,7 @@ export default function Skills() {
         'csharp': 0,
         'nestjs': 0,
         'graphql': 0,
+        'mongodb': 0,
     });
 
     function occurrCounter(array, param) {
@@ -81,6 +82,7 @@ export default function Skills() {
                                 <Th>Quantos Projetos?</Th>
                             </Tr>
                         </Thead>
+                        
                         <Skill icon={skill.graphql} title="GraphQL" quantity={skillQuant.graphql} />
                         {/* Javascript, Typescript and Frameworks */}
                         <Skill icon={skill.javascript} title='Javascript' quantity={skillQuant.javascript} />
@@ -102,6 +104,7 @@ export default function Skills() {
                         {/* Golang and Frameworks */}
                         <Skill icon={skill.golang} title='Golang' quantity={skillQuant.golang} />
                         {/* Databases */}
+                        <Skill icon={skill.mongodb} title="MongoDB" quantity={skillQuant.mongodb} />
                         <Skill icon={skill.postgresql} title='PostgreSQL' quantity={skillQuant.postgresql} />
                         <Skill icon={skill.mysql} title='MySQL' quantity={skillQuant.mysql} />
 
