@@ -12,7 +12,7 @@ export default function FastCounter(props) {
   }, []);
 
   return (
-    <Flex direction="row" ml={12}>
+    <Flex direction="row" ml={12} justify="center">
       <motion.h1
         color={props.color || "black"}
         style={{ fontWeight: 500, fontSize: 16 }}

@@ -1,19 +1,11 @@
-import { Box, Text, Divider, Image, Flex } from "@chakra-ui/react";
+import { Box, Text, Divider, Flex } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 
 import CustomTabs from "../components/CustomTabs";
 import Form from "../components/Form";
 import FastCounter from "../components/FastCounter";
 
-const Title = ({ children }) => {
-  return (
-    <Text fontSize="30" color="gray.700" m={10}>
-      {children}
-    </Text>
-  );
-};
-
-const Subtitle = ({ children, onClick, _hover, cursor, textDecoration }) => {
+const HText = ({ children, onClick, _hover, cursor, textDecoration }) => {
   return (
     <Text
       fontSize="17"
@@ -42,48 +34,37 @@ export default function Home() {
           ease: [0, 0.71, 0.2, 1.01],
         }}
       >
-        <Flex
-          direction={{ base: "column", sm: "row" }}
-          justifyContent="space-around"
-        >
-          <Box>
-            <Title>Seja bem-vindo(a) ao meu Portfólio!</Title>
-            <Subtitle>
-              Marcell. Desenvolvedor de 19 anos, amante do Linux e Criptomoedas.
-            </Subtitle>
-            <Subtitle>
-              Atualmente cursando Ciência da Computação na Unijorge.
-            </Subtitle>
+        <Flex direction={{ base: "column", sm: "row" }} justifyContent="center">
+          <Box /* fontSize="30" */ color="gray.700" m={10} textAlign="center">
+            <HText>
+              <Text fontSize={20} fontWeight={500}>
+                Marcell Dactes
+              </Text>
+              <b>Desenvolvedor Full-stack</b> de 19 anos, amante do{" "}
+              <b>Linux </b>e <b>Criptomoedas</b>. Atualmente cursando
+              <b> Ciência da Computação </b>
+              na Unijorge.
+            </HText>
             <FastCounter quantity={3808} text="+ Horas de código!" />
             <FastCounter
               quantity={48}
               text="+ Horas de Aulas/Oficinas Ministradas!"
             />
-            <Subtitle
+            <HText
               _hover={{ color: "blue.500" }}
               cursor="pointer"
               textDecoration="underline"
               onClick={() => window.scroll({ top: 900, behavior: "smooth" })}
             >
               Tenha um contato direto comigo!
-            </Subtitle>
+            </HText>
           </Box>
           <Box
             textAlign={{ base: "left", sm: "center" }}
             display="block"
             alignItems="center"
             m={10}
-          >
-            <Image
-              src="./me.jpg"
-              borderRadius="full"
-              boxSize="200px"
-              fallbackSrc="https://via.placeholder.com/150"
-              objectFit="cover"
-            />
-            <Text as="b">Marcell Dactes</Text>
-            <Text>Desenvolvedor Full-Stack</Text>
-          </Box>
+          ></Box>
         </Flex>
         <CustomTabs />
         <Divider my={10} />
