@@ -1,4 +1,3 @@
-/* eslint-disable react/display-name */
 import React from 'react';
 import {
     Button,
@@ -11,10 +10,6 @@ import {
     useMultiStyleConfig,
     useTab
 } from '@chakra-ui/react';
-
-import { useRef } from "react";
-import { motion } from "framer-motion";
-import { useFollowPointer } from "../utils/use-follow-pointer";
 
 const CustomTab = React.forwardRef((props, ref) => {
     const tabProps = useTab({ ...props, ref })
@@ -30,9 +25,6 @@ const CustomTab = React.forwardRef((props, ref) => {
 })
 
 export default function CustomTabs() {
-    const ref = useRef(null);
-    const { x, y } = useFollowPointer(ref);
-
     return (
         <Tabs textAlign='center'>
             <TabList display='flex' flexDirection='row' justifyContent={{base:'space-around', sm:'space-evenly'}}>
@@ -54,19 +46,6 @@ export default function CustomTabs() {
                 </TabPanel>
                 <TabPanel fontSize={17}>
                     <Text as='b'>Desenvolvedor Full-Stack</Text>
-                    <motion.div
-                        ref={ref}
-                        className="box"
-                        animate={{ x, y }}
-                        transition={{
-                            type: "spring",
-                            damping: 3,
-                            stiffness: 50,
-                            restDelta: 0.001
-                        }}
-                    >
-                        <p>Back-end {'>'} Front-end</p>
-                    </motion.div>
                     <Text mb={2} mx={20}>Apaixonado por programação. Iniciei meus estudos na área por volta dos 14 anos com a linguagem <b>Python</b>. Hoje em dia, programo principalmente em <b>Javascript</b> utilizando seus frameworks <b>React</b> e <b>Node</b>. Entendo que a linguagem de programação é meramente uma ferramenta. O importante mesmo é a <b>Lógica!</b> Pensando nisso, tenho projetos também em outras linguagens de programação, como <b>C#</b>, <b>Java</b> e até mesmo o próprio Python.</Text>
                     <Text>Algumas empresas que utilizam ou já utilizaram meus serviços:</Text>
                     <Flex direction='column'>
