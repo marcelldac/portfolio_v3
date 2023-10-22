@@ -45,7 +45,7 @@ export default function CustomTabs() {
           fontSize={17}
         >
           <Image
-            src="./me.jpg"
+            src="./speaker.jpg"
             borderRadius="full"
             boxSize="200px"
             fallbackSrc="https://via.placeholder.com/150"
@@ -66,26 +66,31 @@ export default function CustomTabs() {
           <Text as="b">Na Unijorge (Camaçari):</Text>
           <Text>Lógica de Programação: Iniciando no mundo da programação.</Text>
         </TabPanel>
-        <TabPanel fontSize={17}>
+        <TabPanel
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          fontSize={17}
+        >
+          <Image
+            src="./developer.jpg"
+            borderRadius="full"
+            boxSize="200px"
+            fallbackSrc="https://via.placeholder.com/150"
+            objectFit="cover"
+          />
           <Text as="b">Desenvolvedor Full-Stack</Text>
           <Text mb={2} mx={20}>
-            Apaixonado por programação. Iniciei meus estudos na área por volta
-            dos 14 anos com a linguagem <b>Python</b>. Hoje em dia, programo
-            principalmente em <b>Javascript</b> utilizando seus frameworks{" "}
-            <b>React</b> e <b>Node</b>. Entendo que a linguagem de programação é
-            meramente uma ferramenta. O importante mesmo é a <b>Lógica!</b>{" "}
-            Pensando nisso, tenho projetos também em outras linguagens de
-            programação, como <b>C#</b>, <b>Java</b> e até mesmo o próprio
-            Python.
+            Atualmente trabalhando com os frameworks mais avançados do mercado
+            web. Utilizando <b>Typescript</b> como linguagem principal para o
+            desenvolvimento de aplicações web complexas e dinâmicas. Além de
+            <b> APIs</b> que permitem a comunicação o lado do cliente e
+            servidor. Desdes frameworks podem ser citados <b>Next.js</b> e{" "}
+            <b>Nest.js</b>. Sigo aprofundando meus estudos, buscando entender
+            mais sobre
+            <b> arquitetura de software</b>, <b>GraphQL</b>, <b>RabbitMQ</b> e{" "}
+            <b>Kafka</b>.
           </Text>
-          <Text>
-            Algumas empresas que utilizam ou já utilizaram meus serviços:
-          </Text>
-          <Flex direction="column">
-            <Text as="b">No Trânsito</Text>
-            <Text as="b">GoodVibe</Text>
-            <Text as="b">Learn More</Text>
-          </Flex>
         </TabPanel>
         <TabPanel ml={2} fontSize={17}>
           <Text as="b">Cientista da Computação! (quase)</Text>
