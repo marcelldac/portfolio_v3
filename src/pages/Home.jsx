@@ -1,9 +1,9 @@
 import { Box, Text, Divider, Flex } from "@chakra-ui/react";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
 import CustomTabs from "../components/CustomTabs";
 import Form from "../components/Form";
-import FastCounter from "../components/FastCounter";
+import { useEffect } from "react";
 
 const HText = ({ children, onClick, _hover, cursor, textDecoration }) => {
   return (
@@ -22,6 +22,28 @@ const HText = ({ children, onClick, _hover, cursor, textDecoration }) => {
   );
 };
 
+const FastCounter = (props) => {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, Math.round);
+
+  useEffect(() => {
+    const animation = animate(count, props.quantity, { duration: 3 });
+    return animation.stop;
+  }, []);
+
+  return (
+    <Flex direction="row" ml={12} justify="center">
+      <motion.h1
+        color={props.color || "black"}
+        style={{ fontWeight: 500, fontSize: 16 }}
+      >
+        {rounded}
+      </motion.h1>
+      <Text ml={2}>{props.text}</Text>
+    </Flex>
+  );
+};
+
 export default function Home() {
   return (
     <Box overflowY="hidden">
@@ -35,7 +57,7 @@ export default function Home() {
         }}
       >
         <Flex direction={{ base: "column", sm: "row" }} justifyContent="center">
-          <Box /* fontSize="30" */ color="gray.700" m={10} textAlign="center">
+          <Box color="gray.700" m={10} textAlign="center">
             <HText>
               <Text fontSize={20} fontWeight={500}>
                 Marcell Dactes
